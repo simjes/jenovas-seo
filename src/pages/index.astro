@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero.jpg";
 import "@/globals.css";
-import PodcastLinks from "@/components/podcast-links";
+import PodcastLinks from "@/components/PodcastLinks.astro";
 ---
 
 <html lang="no" class="h-full">
@@ -12,7 +12,7 @@ import PodcastLinks from "@/components/podcast-links";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Jenova's Vitner</title>
+		<title>Jenovas Vitner</title>
 	</head>
 	<body class="h-full">
 		<section
@@ -28,7 +28,7 @@ import PodcastLinks from "@/components/podcast-links";
 			<div
 				class="text-center text-white p-8 bg-black bg-opacity-50 rounded-2xl"
 			>
-				<h1 class="text-4xl md:text-6xl font-bold mb-4">Jenova's Vitner</h1>
+				<h1 class="text-4xl md:text-6xl font-bold mb-4">Jenovas Vitner</h1>
 
 				<iframe
 					class="rounded-xl border-none"
@@ -41,7 +41,7 @@ import PodcastLinks from "@/components/podcast-links";
 			</div>
 
 			<div class="absolute bottom-0 left-0 right-0">
-				<PodcastLinks client:idle />
+				<PodcastLinks />
 			</div>
 		</section>
 	</body>

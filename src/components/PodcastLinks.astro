@@ -1,0 +1,53 @@
+---
+import { Headphones, Radio, Podcast } from "lucide-react";
+
+interface PodcastLink {
+  id: number;
+  title: string;
+  url: string;
+  icon: string;
+}
+
+const podcastLinks: PodcastLink[] = [
+  {
+    id: 1,
+    title: "Spotify - Jenovas Vitner",
+    url: "https://open.spotify.com/show/0jxTtqiycCBwCcXGqGawoa?si=3547f6c095d343e5",
+    icon: "Headphones",
+  },
+  {
+    id: 2,
+    title: "Apple Podcasts - Jenovas Vitner",
+    url: "https://podcasts.apple.com/jm/podcast/jenovas-vitner-en-final-fantasy-podcast/id1243030195",
+    icon: "Podcast",
+  },
+  {
+    id: 3,
+    title: "RadCrew - Final Fantasy",
+    url: "https://www.radcrew.net/category/finalfantasy",
+    icon: "Radio",
+  },
+];
+---
+
+<div class="w-full bg-background border rounded-md shadow-md p-4">
+  <div class="flex flex-wrap justify-center items-center gap-4">
+    {
+      podcastLinks.map((link) => (
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center px-4 py-2 text-sm text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-200 rounded-md whitespace-nowrap"
+        >
+          {link.icon === "Headphones" && (
+            <Headphones className="w-4 h-4 mr-2" />
+          )}
+          {link.icon === "Podcast" && <Podcast className="w-4 h-4 mr-2" />}
+          {link.icon === "Radio" && <Radio className="w-4 h-4 mr-2" />}
+          <span>{link.title}</span>
+        </a>
+      ))
+    }
+  </div>
+</div>
