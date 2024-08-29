@@ -1,16 +1,38 @@
 ---
-
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero.jpg"; // Make sure to add your image to this path
 ---
 
-<html lang="en">
+<html lang="no" class="h-full">
 	<head>
 		<meta charset="utf-8" />
+		<!-- TODO: favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Jenovas Vitner</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="h-full">
+		<section
+			class="relative h-screen flex items-center justify-center overflow-hidden"
+		>
+			<Image
+				src={heroImage}
+				alt="Hero background"
+				widths={[400, 800, 1200]}
+				sizes="100vw"
+				class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+			/>
+			<div
+				class="text-center text-white p-8 bg-black bg-opacity-50 rounded-2xl"
+			>
+				<h1 class="text-4xl md:text-6xl font-bold mb-4">Jenovas Vitner</h1>
+				<a
+					href="#"
+					class="inline-block px-6 py-3 bg-[#ff4500] hover:bg-[#ff6347] text-white font-bold rounded-lg transition duration-300"
+					>Lær mer</a
+				>
+			</div>
+		</section>
 	</body>
 </html>
