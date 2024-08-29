@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero.jpg";
 import "@/globals.css";
+import PodcastLinks from "@/components/podcast-links";
 ---
 
 <html lang="no" class="h-full">
@@ -11,7 +12,7 @@ import "@/globals.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Jenovas Vitner</title>
+		<title>Jenova's Vitner</title>
 	</head>
 	<body class="h-full">
 		<section
@@ -20,14 +21,14 @@ import "@/globals.css";
 			<Image
 				src={heroImage}
 				alt="Hero background"
-				widths={[400, 800, 1200]}
-				sizes="100vw"
+				widths={[640, 768, 1024, 1280, 1536]}
+				sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
 				class="absolute top-0 left-0 w-full h-full object-cover -z-10"
 			/>
 			<div
 				class="text-center text-white p-8 bg-black bg-opacity-50 rounded-2xl"
 			>
-				<h1 class="text-4xl md:text-6xl font-bold mb-4">Jenovas Vitner</h1>
+				<h1 class="text-4xl md:text-6xl font-bold mb-4">Jenova's Vitner</h1>
 
 				<iframe
 					class="rounded-xl border-none"
@@ -37,6 +38,10 @@ import "@/globals.css";
 					allowfullscreen=""
 					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 					loading="lazy"></iframe>
+			</div>
+
+			<div class="absolute bottom-0 left-0 right-0">
+				<PodcastLinks client:idle />
 			</div>
 		</section>
 	</body>
