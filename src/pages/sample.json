@@ -1,0 +1,844 @@
+{
+  "copyrights": [],
+  "description": "Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad (Gamer.no, LevelUp og Rad Crew) snakker om Final Fantasy og Kingdom Hearts",
+  "html_description": "Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad (Gamer.no, LevelUp og Rad Crew) snakker om Final Fantasy og Kingdom Hearts",
+  "explicit": false,
+  "external_urls": {
+    "spotify": "https://open.spotify.com/show/0jxTtqiycCBwCcXGqGawoa"
+  },
+  "href": "https://api.spotify.com/v1/shows/0jxTtqiycCBwCcXGqGawoa?market=no&locale=en-US%2Cen%3Bq%3D0.9%2Cno%3Bq%3D0.8",
+  "id": "0jxTtqiycCBwCcXGqGawoa",
+  "images": [
+    {
+      "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+      "height": 640,
+      "width": 640
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+      "height": 300,
+      "width": 300
+    },
+    {
+      "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+      "height": 64,
+      "width": 64
+    }
+  ],
+  "is_externally_hosted": false,
+  "languages": ["no"],
+  "media_type": "audio",
+  "name": "Jenovas Vitner: En Final Fantasy-podcast",
+  "publisher": "Radcorp AS",
+  "type": "show",
+  "uri": "spotify:show:0jxTtqiycCBwCcXGqGawoa",
+  "total_episodes": 19,
+  "episodes": {
+    "href": "https://api.spotify.com/v1/shows/0jxTtqiycCBwCcXGqGawoa/episodes?offset=0&limit=50&market=no&locale=en-US,en;q%3D0.9,no;q%3D0.8",
+    "limit": 50,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 19,
+    "items": [
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/3hE48QDoiweIDWBdlhMCs1/clip_130274_190274.mp3",
+        "description": "Final Fantasy-podcasten Jenovas Vitner er tilbake med en Final Fantasy VII Rebirth Special! Audun, Karl Martin og Jostein (først og fremst kjent fra Gamer.no, LevelUp Norge og Rad Crew) gjennomgår en liten REBIRTH i denne episoden av Jenovas Vitner. PS Jenovas Vitner er et veldig morsomt navn men det dreper søkbarheten til denne podcasten så plis fortell en venn om oss!",
+        "html_description": "<h2>Final Fantasy-podcasten Jenovas Vitner er tilbake med en Final Fantasy VII Rebirth Special!</h2><br/><p></p><br/><p>Audun, Karl Martin og Jostein (først og fremst kjent fra Gamer.no, LevelUp Norge og Rad Crew) gjennomgår en liten REBIRTH i denne episoden av Jenovas Vitner. PS Jenovas Vitner er et veldig morsomt navn men det dreper søkbarheten til denne podcasten så plis fortell en venn om oss!</p>",
+        "duration_ms": 4763084,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/4s2e5doqEkO91nYPhRaeJz"
+        },
+        "href": "https://api.spotify.com/v1/episodes/4s2e5doqEkO91nYPhRaeJz",
+        "id": "4s2e5doqEkO91nYPhRaeJz",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Jenovas Vitner er tilbake: Final Fantasy VII Rebirth",
+        "release_date": "2024-08-27",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": true,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:4s2e5doqEkO91nYPhRaeJz"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/0Ogit6qluORZPHQc9d4YhT/clip_595442_655442.mp3",
+        "description": "Final Fantasy-podcasten Jenovas Vitner er tilbake med en Final Fantasy XVI Special! Audun, Karl Martin og Jostein (henholdsvis fra Gamer.no, LevelUp Norge og Rad Crew) har en liten reunion for å snakke om det nyeste skuddet i Final Fantasy-serien: Final Fantasy XVI.",
+        "html_description": "<h2>Final Fantasy-podcasten Jenovas Vitner er tilbake med en Final Fantasy XVI Special!</h2><br/><p></p><br/><p>Audun, Karl Martin og Jostein (henholdsvis fra Gamer.no, LevelUp Norge og Rad Crew) har en liten reunion for å snakke om det nyeste skuddet i Final Fantasy-serien: Final Fantasy XVI.</p>",
+        "duration_ms": 6484449,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/4oYWSP38Qn86IsDM8KEsif"
+        },
+        "href": "https://api.spotify.com/v1/episodes/4oYWSP38Qn86IsDM8KEsif",
+        "id": "4oYWSP38Qn86IsDM8KEsif",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Jenovas Vitner Reunion Podcast: Final Fantasy XVI",
+        "release_date": "2023-08-29",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": true,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:4oYWSP38Qn86IsDM8KEsif"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/77URK7leXBrCxqwcJNKZtP/clip_172041_232041.mp3",
+        "description": "Vi ser tilbake på Kingdom Hearts i denne nye podcast-miniserien. Denne gangen tar vi for oss Dream Drop Distance, X (inkludert Back Cover-filmen) og 0.2 Birth By Sleep: A Fragmentary Passage. I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad. Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en av tidenes største crossovere: […]",
+        "html_description": "<br/><h2>Vi ser tilbake på Kingdom Hearts i denne nye podcast-miniserien. Denne gangen tar vi for oss Dream Drop Distance, X (inkludert Back Cover-filmen) og 0.2 Birth By Sleep: A Fragmentary Passage.</h2><br/><p></p><br/><p>I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad. Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en av tidenes største crossovere: Disney og Final Fantasy!</p><br/><p>I denne episoden tar vi for oss tre spill som skiller seg litt fra resten. Ett til 3DS, et browserspill og ikke minst den korte episoden som fungerte som en slags prolog til Kingdom Hearts 3 og viste frem litt av den nye grafikkteknologien i 3eren.</p>",
+        "duration_ms": 4588609,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/4FMwSEYX0Dle12jtA6eNah"
+        },
+        "href": "https://api.spotify.com/v1/episodes/4FMwSEYX0Dle12jtA6eNah",
+        "id": "4FMwSEYX0Dle12jtA6eNah",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "NoBuddies – En miniserie om Kingdom Hearts #4",
+        "release_date": "2019-01-28",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:4FMwSEYX0Dle12jtA6eNah"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/0xsRRX5tRKA21vhClgBYYo/clip_328920_388920.mp3",
+        "description": "Vi ser tilbake på Kingdom Hearts i denne nye podcast-miniserien. Denne gangen tar vi for oss Kingdom Hearts: Birth By Sleep, Kingdom Hearts: 358/2 Days og og Kingdom Hearts: Re:Coded. I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad. Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en av tidenes største […]",
+        "html_description": "<br/><h2>Vi ser tilbake på Kingdom Hearts i denne nye podcast-miniserien. Denne gangen tar vi for oss Kingdom Hearts: Birth By Sleep, Kingdom Hearts: 358/2 Days og og Kingdom Hearts: Re:Coded.</h2><br/><p></p><br/><p>I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad. Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en av tidenes største crossovere: Disney og Final Fantasy!</p><br/><p>I denne episoden tar vi for oss tre av spillene som har fylt tomrommet mellom Kingdom Hearts 2 og 3. Mest viktig er nok Kingdom Hearts: Birth By Sleep som forklarer hva som skjedde før Soras eventyr begynte, og hvem antagonisten Xehanort egentlig er. I tillegg går vi kjapt innpå Nintendo DS-spillene 358/2 Days og Re:Coded (sett inn din egen vits om teite titler her, kjære leser). Her er tredje episode av NoBuddies, en podcast om Kingdom Hearts! Du abonnerer via samme feed som Jenovas Vitner.</p>",
+        "duration_ms": 4706613,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/4aCaHpz1Qa5m024lzkyEtv"
+        },
+        "href": "https://api.spotify.com/v1/episodes/4aCaHpz1Qa5m024lzkyEtv",
+        "id": "4aCaHpz1Qa5m024lzkyEtv",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "NoBuddies – En miniserie om Kingdom Hearts #3",
+        "release_date": "2019-01-23",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:4aCaHpz1Qa5m024lzkyEtv"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/5gLKxSjQhwET3HO1QcCHPi/clip_496934_556934.mp3",
+        "description": "Vi ser tilbake på Kingdom Hearts i denne nye podcast-miniserien. Denne gangen tar vi for oss Kingdom Hearts 2, og Kingdom Hearts: Chain of Memories I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad.  Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en av tidenes største crossovere: Disney og Final Fantasy! […]",
+        "html_description": "<h2>Vi ser tilbake på Kingdom Hearts i denne nye podcast-miniserien. Denne gangen tar vi for oss Kingdom Hearts 2, og Kingdom Hearts: Chain of Memories</h2><br/><p>I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad.  Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en av tidenes største crossovere: Disney og Final Fantasy!</p><br/><p>I denne episoden tar vi for oss det beste spillet i serien, Kingdom Hearts 2, samt det mange mener er det nest beste: Kingdom Hearts: Chain of Memories på PSP (og senere PS3/PS4)</p><br/><p>Her er første episode av NoBuddies, en podcast om Kingdom Hearts!  Du abonnerer via samme feed som Jenovas Vitner.</p>",
+        "duration_ms": 5434025,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/4kqIoaanYugxFGQVjOxW1N"
+        },
+        "href": "https://api.spotify.com/v1/episodes/4kqIoaanYugxFGQVjOxW1N",
+        "id": "4kqIoaanYugxFGQVjOxW1N",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "NoBuddies – En miniserie om Kingdom Hearts #2",
+        "release_date": "2019-01-14",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:4kqIoaanYugxFGQVjOxW1N"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/39AlgxuyyLaUGR652Ye1rR/clip_309908_369908.mp3",
+        "description": "Hva skjer når Disney og Square Enix kombinerer to av sine mest populære merkevarer? Vi ser tilbake på Kingdom Hearts mens vi venter på det tredje store Kingdom Hearts-spillet, i denne nye podcast-miniserien. I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad.  Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en […]",
+        "html_description": "<h2>Hva skjer når Disney og Square Enix kombinerer to av sine mest populære merkevarer? Vi ser tilbake på Kingdom Hearts mens vi venter på det tredje store Kingdom Hearts-spillet, i denne nye podcast-miniserien.</h2><br/><p>I 2017 begynte vi serien Jenovas Vitner, en liten podcast-serie om Final Fantasy med Audun Rodem, Karl Martin Hogsnes og Jostein Hakestad.  Det var jo en slags crossover mellom folk fra Gamer.no, LevelUp og Rad Crew, så derfor passer det kanskje bra at vi også dekker en av tidenes største crossovere: Disney og Final Fantasy!</p><br/><p>Her er første episode av NoBuddies, en podcast om Kingdom Hearts!  Du abonnerer via samme feed som Jenovas Vitner.</p>",
+        "duration_ms": 2974567,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/6bDrUeRFDltbwJs2CbOdp7"
+        },
+        "href": "https://api.spotify.com/v1/episodes/6bDrUeRFDltbwJs2CbOdp7",
+        "id": "6bDrUeRFDltbwJs2CbOdp7",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "NoBuddies – En miniserie om Kingdom Hearts #1",
+        "release_date": "2019-01-06",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:6bDrUeRFDltbwJs2CbOdp7"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/0aqT7rSmDHru751UB2dtRu/clip_633653_693653.mp3",
+        "description": "Final Fantasy-podcasten Jenovas Vitner er tilbake! The greatest crossover event in history! Først ut er en episode om en av tidenes største filmflopper: Final Fantasy – The Spirits Within. Final Fantasy: The Spirits Within var en kritisk og pengemessig flopp da den kom ut i 2001, og var en av hovedårsakene til at Square måtte skaffe seg mer kapital ved å fusjonere med Enix, derav Square Enix. I tillegg betydde det i praksis den foreløpige slutten på Square-karrieren til skaperen […]",
+        "html_description": "<h2>Final Fantasy-podcasten Jenovas Vitner er tilbake! The greatest crossover event in history! Først ut er en episode om en av tidenes største filmflopper: Final Fantasy – The Spirits Within.</h2><br/><p></p><br/><p>Final Fantasy: The Spirits Within var en kritisk og pengemessig flopp da den kom ut i 2001, og var en av hovedårsakene til at Square måtte skaffe seg mer kapital ved å fusjonere med Enix, derav Square Enix. I tillegg betydde det i praksis den foreløpige slutten på Square-karrieren til skaperen av Final Fantasy, Hironobu Sakaguchi. Verken fantastisk CG-animasjon (for den tiden) og flere stjerneskuespillere kunne få folk inn i kinoene.</p><br/><p>Finnes det likevel ting det går an å se positivt tilbake på med denne filmen, 17 år senere?</p><br/><p>I hver episode av Jenovas Vitner tok Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av Final Fantasy- spillene og snakker om det i en liten time. Nå begir de seg ut på ukjent farvann og skal ta for seg andre JRPGer, side-topics og hvem vet hva annet!</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 2940805,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/1q1VfPoHOEHNMpYdwIHA1n"
+        },
+        "href": "https://api.spotify.com/v1/episodes/1q1VfPoHOEHNMpYdwIHA1n",
+        "id": "1q1VfPoHOEHNMpYdwIHA1n",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Jenovas Vitner: Final Fantasy- The Spirits Within",
+        "release_date": "2018-08-21",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:1q1VfPoHOEHNMpYdwIHA1n"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/2C9YG7kaQDDKxIjeRGRkjD/clip_283601_343601.mp3",
+        "description": "Vi går ut på topp med foreløpig siste episode av Final Fantasy-tilbakeblikket Jenovas Vitner. Final Fantasy IX representerer både noe nytt og noe gammelt. Det var et varmt og kjærlig farvel til old school Final Fantasy på mange måter, samtidig som det viste vei fremover med en spennende historie og dype rollefigurer. Det er Karl sin favoritt, er det kanskje din også? I hver episode av Jenovas Vitner tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av […]",
+        "html_description": "<h2>Vi går ut på topp med foreløpig siste episode av Final Fantasy-tilbakeblikket Jenovas Vitner.</h2><br/><p></p><br/><p>Final Fantasy IX representerer både noe nytt og noe gammelt. Det var et varmt og kjærlig farvel til old school Final Fantasy på mange måter, samtidig som det viste vei fremover med en spennende historie og dype rollefigurer. Det er Karl sin favoritt, er det kanskje din også?</p><br/><p>I hver episode av Jenovas Vitner tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av Final Fantasy- spillene og snakker om det i en liten time. Dette er foreløpig siste show, men følg med videre for bonusepisode og mulige fortsettelser! Kanskje sees vi igjen i Midgard et sted.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 4685831,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/5v8txtSXIyik80zivk2Znc"
+        },
+        "href": "https://api.spotify.com/v1/episodes/5v8txtSXIyik80zivk2Znc",
+        "id": "5v8txtSXIyik80zivk2Znc",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy IX: Melodies of Life",
+        "release_date": "2017-10-31",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:5v8txtSXIyik80zivk2Znc"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/6nZIrIuqrrnVS5KWAuBHbd/clip_640467_700467.mp3",
+        "description": "Rad Crew presenterer ellevte podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: XIII, XIII-2 og Lightning Returns! Final Fantasy XIII-serien er hatet og elsket, men brakte oss hvertfall Lightning, ei tøff dame med sverd. En forvirrende mytologi og en enda mer forvirrende historie brettes ut over flere titalls timer i denne serien, men vet du hva. Det var ikke så ille alltid! I hver episode av Jenovas Vitner tar Audun Rodem, Karl-Martin Hogsnes […]",
+        "html_description": "<h2>Rad Crew presenterer ellevte podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: XIII, XIII-2 og Lightning Returns!</h2><br/><p></p><br/><p>Final Fantasy XIII-serien er hatet og elsket, men brakte oss hvertfall Lightning, ei tøff dame med sverd. En forvirrende mytologi og en enda mer forvirrende historie brettes ut over flere titalls timer i denne serien, men vet du hva. Det var ikke så ille alltid!</p><br/><p>I hver episode av Jenovas Vitner tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av Final Fantasy- spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 4535018,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/4cyQkJLcbGWPAo38627m2k"
+        },
+        "href": "https://api.spotify.com/v1/episodes/4cyQkJLcbGWPAo38627m2k",
+        "id": "4cyQkJLcbGWPAo38627m2k",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy XIII: Hva er en L'Cie?",
+        "release_date": "2017-10-18",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:4cyQkJLcbGWPAo38627m2k"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4Vd7c2gEh6QWjDPpuPmrgD/clip_211596_271596.mp3",
+        "description": "Rad Crew presenterer tiende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: XI og XIV! Final Fantasy XI og XIV skiller seg fra resten: de kan kun spilles online. Begge har gjennomgått store endringer så lenge de har eksistert, og begge er fremdeles spillbare. I denne episoden tar vi for oss MMOene i serien! I hver episode av Jenovas Vitner tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av Final […]",
+        "html_description": "<h2>Rad Crew presenterer tiende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: XI og XIV!</h2><br/><p></p><br/><p>Final Fantasy XI og XIV skiller seg fra resten: de kan kun spilles online. Begge har gjennomgått store endringer så lenge de har eksistert, og begge er fremdeles spillbare. I denne episoden tar vi for oss MMOene i serien!</p><br/><p>I hver episode av Jenovas Vitner tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av Final Fantasy- spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 2850294,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/35xD0LDcecWVcp2vXjFwab"
+        },
+        "href": "https://api.spotify.com/v1/episodes/35xD0LDcecWVcp2vXjFwab",
+        "id": "35xD0LDcecWVcp2vXjFwab",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy MMO-ene: Alltid online",
+        "release_date": "2017-10-04",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:35xD0LDcecWVcp2vXjFwab"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4t6xMTLGj1cJVs1Uvyblq0/clip_157158_217158.mp3",
+        "description": "Rad Crew presenterer niende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Mesterverket Final Fantasy VI! Final Fantasy VI representerte slutten på SNES-æraen og samtidig også kanskje den kreative toppen av hele serien. Musikk, grafikk og narrativ kompleksitet var langt utover det man kunne forvente av et Super Nintendo-spill. Men hva er greia med de moderne portene av spillet? I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg […]",
+        "html_description": "<h2>Rad Crew presenterer niende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Mesterverket Final Fantasy VI!</h2><br/><p></p><br/><p>Final Fantasy VI representerte slutten på SNES-æraen og samtidig også kanskje den kreative toppen av hele serien. Musikk, grafikk og narrativ kompleksitet var langt utover det man kunne forvente av et Super Nintendo-spill. Men hva er greia med de moderne portene av spillet?</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 3282882,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/0AbIu2hIcjmNLQuU6eSPnd"
+        },
+        "href": "https://api.spotify.com/v1/episodes/0AbIu2hIcjmNLQuU6eSPnd",
+        "id": "0AbIu2hIcjmNLQuU6eSPnd",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy VI: Magnum Opus",
+        "release_date": "2017-09-20",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:0AbIu2hIcjmNLQuU6eSPnd"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/2q0UaS7k0usVOORPHRY2gE/clip_642003_702003.mp3",
+        "description": "Rad Crew presenterer åttende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Feelgood buddy-komedien Final Fantasy XV! Final Fantasy XV er det foreløpig siste spillet i serien og handler om vennskap, guder og kongelige intriger. Det er et spill som tok vanvittig lang tid å lage, som bytta navn fra «Versus 13« til «15», og som lenge sto i fare for å bli en vits ala «Duke Nukem Forever». Men i 2016 […]",
+        "html_description": "<h2>Rad Crew presenterer åttende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Feelgood buddy-komedien Final Fantasy XV!</h2><br/><p></p><br/><p>Final Fantasy XV er det foreløpig siste spillet i serien og handler om vennskap, guder og kongelige intriger. Det er et spill som tok vanvittig lang tid å lage, som bytta navn fra «Versus 13« til «15», og som lenge sto i fare for å bli en vits ala «Duke Nukem Forever». Men i 2016 kom det ut. Var det verdt det? Vi diskuterer.</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 4162454,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/487gF19vm5UBegSJ44RCIZ"
+        },
+        "href": "https://api.spotify.com/v1/episodes/487gF19vm5UBegSJ44RCIZ",
+        "id": "487gF19vm5UBegSJ44RCIZ",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy XV: Stand by me",
+        "release_date": "2017-09-06",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:487gF19vm5UBegSJ44RCIZ"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4G8C8uXihHy8J6KvtpVcQR/clip_266705_326705.mp3",
+        "description": "Rad Crew presenterer syvende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy IV! Final Fantasy IV er kanskje det definitive «old school» Final Fantasy-spillet. Det inneholder alle seriens kjennemerker, en gripende historie med karakterer som gjennomgår personlige reiser, og kunne for første gang by på avansert 16-bits grafikk og lyd – med tilhørende kvantesprang i historiefortellingen som var mulig å gjennomføre på maskinvaren. I hver episode tar Audun Rodem, Karl-Martin […]",
+        "html_description": "<h2>Rad Crew presenterer syvende podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy IV!</h2><br/><p></p><br/><p>Final Fantasy IV er kanskje det definitive «old school» Final Fantasy-spillet. Det inneholder alle seriens kjennemerker, en gripende historie med karakterer som gjennomgår personlige reiser, og kunne for første gang by på avansert 16-bits grafikk og lyd – med tilhørende kvantesprang i historiefortellingen som var mulig å gjennomføre på maskinvaren.</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 2625827,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/3C84JC16vjrD55WCD93BUk"
+        },
+        "href": "https://api.spotify.com/v1/episodes/3C84JC16vjrD55WCD93BUk",
+        "id": "3C84JC16vjrD55WCD93BUk",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy IV: Hjelp, vi bomba landsbyen!",
+        "release_date": "2017-08-23",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:3C84JC16vjrD55WCD93BUk"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/1LpWQVvgS9GiO9nCPgf3is/clip_199305_259305.mp3",
+        "description": "Rad Crew presenterer sjette podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy XII! Final Fantasy XII er kanskje det merkeligste og mest unike spillet i serien. Kampene er ikke lenger turbaserte, det føles litt som et enspiller-MMO, spillet foregår i en allerede etablert verden (som er nytt for hovedserien), og det ble utviklet av teamet bak Final Fantasy Tactics og Vagrant Story. Historien er, hvertfall i starten, mye mer jordnær […]",
+        "html_description": "<h2>Rad Crew presenterer sjette podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy XII!</h2><br/><p></p><br/><p>Final Fantasy XII er kanskje det merkeligste og mest unike spillet i serien. Kampene er ikke lenger turbaserte, det føles litt som et enspiller-MMO, spillet foregår i en allerede etablert verden (som er nytt for hovedserien), og det ble utviklet av teamet bak Final Fantasy Tactics og Vagrant Story.</p><br/><p>Historien er, hvertfall i starten, mye mer jordnær enn det vi er vant til fra serien. I sentrum står en historie om politisk intrige, om en prinsesse i eksil, som kanskje minner mer om Game of Thrones enn Final Fantasy. Samtidig er hovedrollegalleriet i høyeste grad er inspirert av George Lucas sine kreasjoner.</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 4086896,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/2pjK4FjhM3nsAGGJLRfEbb"
+        },
+        "href": "https://api.spotify.com/v1/episodes/2pjK4FjhM3nsAGGJLRfEbb",
+        "id": "2pjK4FjhM3nsAGGJLRfEbb",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy XII: Historien om kongeriket Ivalice",
+        "release_date": "2017-08-09",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:2pjK4FjhM3nsAGGJLRfEbb"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4TiUXqUPiyCjAwfRNxXMuD/clip_293491_353491.mp3",
+        "description": "Rad Crew presenterer femte podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy I til III. De tre første Final Fantasy-spillene kan selvfølgelig ikke matche de nyere innslagenes pomp og prakt, men allerede med seriens begynnelse i 1987 la Square grunnlaget for alt Final Fantasy har blitt kjent for siden. Fantastiske og forvirrende historier, merkelige og geniale kampsystemer og noe av den beste musikken man kunne presse ut av NES er […]",
+        "html_description": "<h2>Rad Crew presenterer femte podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy I til III.</h2><br/><p></p><br/><p>De tre første Final Fantasy-spillene kan selvfølgelig ikke matche de nyere innslagenes pomp og prakt, men allerede med seriens begynnelse i 1987 la Square grunnlaget for alt Final Fantasy har blitt kjent for siden.</p><br/><p>Fantastiske og forvirrende historier, merkelige og geniale kampsystemer og noe av den beste musikken man kunne presse ut av NES er bare noen av tingene vi sveiper innom når vi tar for oss de tre ambisiøse, og svært forskjellige, første spillene.</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 4325713,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/3z3woQX54eg7lvDeZv892m"
+        },
+        "href": "https://api.spotify.com/v1/episodes/3z3woQX54eg7lvDeZv892m",
+        "id": "3z3woQX54eg7lvDeZv892m",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy I til III – Der alt begynte",
+        "release_date": "2017-07-26",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:3z3woQX54eg7lvDeZv892m"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/5mhdqEUdK8bsjdMImRb4uV/clip_280145_340145.mp3",
+        "description": "Rad Crew presenterer fjerde podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy VIII!  Final Fantasy VIII sitt kjærlighetsfokus, et omdiskutert og unkt leveling-system, og en litt sutrete hovedperson gjør spillet til et av de mest splittende og kontroversielle i serien. Men vi liker det ganske godt på tross av hvor lett det er å utnytte alle mekanikkene i spillet. Det «Harry Potter»-aktige, skolefokuserte universet og en mer realistisk look gjør […]",
+        "html_description": "<h2>Rad Crew presenterer fjerde podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy VIII! </h2><br/><p>Final Fantasy VIII sitt kjærlighetsfokus, et omdiskutert og unkt leveling-system, og en litt sutrete hovedperson gjør spillet til et av de mest splittende og kontroversielle i serien. Men vi liker det ganske godt på tross av hvor lett det er å utnytte alle mekanikkene i spillet.</p><br/><p>Det «Harry Potter»-aktige, skolefokuserte universet og en mer realistisk look gjør også at det åttende kapittelet skiller seg markant fra alle spillene som kom før. Storyen blir fullstendig bananas mot slutten, men sånn er Final Fantasy!</p><br/><p>Pluss: lykkes spillet i å fortelle en kjærlighetshistorie mellom de to hovedpersonene, eller er det kleint?</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 4439816,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/5IBvMKe5CNPDgURWLOtrRp"
+        },
+        "href": "https://api.spotify.com/v1/episodes/5IBvMKe5CNPDgURWLOtrRp",
+        "id": "5IBvMKe5CNPDgURWLOtrRp",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy VIII - Sci fi Harry Potter?",
+        "release_date": "2017-07-11",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:5IBvMKe5CNPDgURWLOtrRp"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/5ObAOpmDIuZX2qkmBYsQtb/clip_617043_677043.mp3",
+        "description": "Rad Crew presenterer tredje podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy V!  Final Fantasy V viderefører og utbroderer en del av systemene fra III,  og presenterer en historie om to verdener, krystaller, hukommelsestap og mange andre klassiske JRPG-«tropes», Det vanedannende jobbsystemet, variasjonen i steder du kan besøke og en stor åpen verden (til et SNES-spill å være) gjør dette til et av de best likte i serien. Vi snakker […]",
+        "html_description": "<h2>Rad Crew presenterer tredje podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy V! </h2><br/><p>Final Fantasy V viderefører og utbroderer en del av systemene fra III,  og presenterer en historie om to verdener, krystaller, hukommelsestap og mange andre klassiske JRPG-«tropes»,</p><br/><p>Det vanedannende jobbsystemet, variasjonen i steder du kan besøke og en stor åpen verden (til et SNES-spill å være) gjør dette til et av de best likte i serien.</p><br/><p>Vi snakker også om at spillet ikke kom til vesten før mye senere, og forskjellige lokaliseringer fra versjon til versjon.</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 2872608,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/0egpVudIfzKkjGJK5khNYf"
+        },
+        "href": "https://api.spotify.com/v1/episodes/0egpVudIfzKkjGJK5khNYf",
+        "id": "0egpVudIfzKkjGJK5khNYf",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy V - For komplisert for vestlige spillere?",
+        "release_date": "2017-06-28",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:0egpVudIfzKkjGJK5khNYf"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/2ZcwaJ69QrmmLuo4JNlwGv/clip_532362_592362.mp3",
+        "description": "Rad Crew presenterer andre podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy X!  Final Fantasy X er et av de mest populære spillene i serien. Samtidig var det også starten på en ny type Final Fantasy. Det var mer lineært enn før, og for første gang hadde det stemmeskuespillere som spilte alle hovedpersonene. Den tropiske settingen og rollegalleriet som er lett å like har gjort spillet til en fan-favoritt. Et […]",
+        "html_description": "<h2>Rad Crew presenterer andre podcast-episode i miniserien om Final Fantasy med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: Final Fantasy X! </h2><br/><p>Final Fantasy X er et av de mest populære spillene i serien. Samtidig var det også starten på en ny type Final Fantasy. Det var mer lineært enn før, og for første gang hadde det stemmeskuespillere som spilte alle hovedpersonene.</p><br/><p>Den tropiske settingen og rollegalleriet som er lett å like har gjort spillet til en fan-favoritt. Et fengende kampsystem og en av de bedre romansene i serien hjelper også på appellen som spillet fremdeles har. Også har vi spin-offene da!</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 4034256,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/5MhASjchoKX9eOT6Evvk45"
+        },
+        "href": "https://api.spotify.com/v1/episodes/5MhASjchoKX9eOT6Evvk45",
+        "id": "5MhASjchoKX9eOT6Evvk45",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy X - Det første moderne Final Fantasy",
+        "release_date": "2017-06-13",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:5MhASjchoKX9eOT6Evvk45"
+      },
+      {
+        "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/1oqqKgNUiwKQDkBqXMrieB/clip_178186_238186.mp3",
+        "description": "Rad Crew presenterer første podcast-episode i en miniserie med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: det legendariske Final Fantasy VII!  Det er faktisk om lag 20 år siden Final Fantasy-serien fikk sin begynnelse i Europa med det syvende innslaget i serien. For noen av oss var Final Fantasy VII det første møtet med japanske rollespill, mens andre tok en liten omvei før de landet på eposet om Cloud og Sephiroth. Uansett er det umulig å komme unna […]",
+        "html_description": "<h2>Rad Crew presenterer første podcast-episode i en miniserie med Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad. Denne gangen: det legendariske Final Fantasy VII! </h2><br/><p>Det er faktisk om lag 20 år siden Final Fantasy-serien fikk sin begynnelse i Europa med det syvende innslaget i serien.</p><br/><p>For noen av oss var Final Fantasy VII det første møtet med japanske rollespill, mens andre tok en liten omvei før de landet på eposet om Cloud og Sephiroth. Uansett er det umulig å komme unna at spillet har markert seg som et av seriens mest kjente. Jenovas Vitner er en podcast som fokuserer på Final Fantasy-serien.</p><br/><p>I hver episode tar Audun Rodem, Karl-Martin Hogsnes og Jostein Hakestad for seg et av spillene og snakker om det i en liten time. Først ute er Final Fantasy VII.</p><br/><p>Følg vertene på Twitter:</p><br/><p><a href=\"https://twitter.com/MuffensKarl\" rel=\"nofollow\">&#64;MuffensKarl</a> <a href=\"https://twitter.com/arodem\" rel=\"nofollow\">&#64;arodem</a> <a href=\"https://twitter.com/radjostein\" rel=\"nofollow\">&#64;radjostein</a></p>",
+        "duration_ms": 3296001,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/episode/1BUzf6VoI0f6bTgDN2XRcD"
+        },
+        "href": "https://api.spotify.com/v1/episodes/1BUzf6VoI0f6bTgDN2XRcD",
+        "id": "1BUzf6VoI0f6bTgDN2XRcD",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6765630000ba8a45d1c9a1442a443c189f6f57",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67656300005f1f45d1c9a1442a443c189f6f57",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6765630000f68d45d1c9a1442a443c189f6f57",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "is_externally_hosted": false,
+        "is_playable": true,
+        "language": "no",
+        "languages": ["no"],
+        "name": "Final Fantasy VII - En evig klassiker?",
+        "release_date": "2017-05-31",
+        "release_date_precision": "day",
+        "resume_point": {
+          "fully_played": false,
+          "resume_position_ms": 0
+        },
+        "type": "episode",
+        "uri": "spotify:episode:1BUzf6VoI0f6bTgDN2XRcD"
+      }
+    ]
+  }
+}
