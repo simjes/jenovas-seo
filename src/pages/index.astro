@@ -20,6 +20,7 @@ const showDetails = await spotifyClient.shows.get(
 		<Favicons />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={Astro.url} />
 		<title>Jenovas Vitner</title>
 		<meta name="description" content={showDetails.description} />
 		<meta property="og:title" content={showDetails.name} />
@@ -31,7 +32,7 @@ const showDetails = await spotifyClient.shows.get(
 		<meta name="twitter:title" content={showDetails.name} />
 		<meta name="twitter:description" content={showDetails.description} />
 		<meta name="twitter:image" content={showDetails.images[0].url} />
-		<link rel="canonical" href={Astro.url} />
+		<meta name="twitter:site" content="@rad_crew" />
 
 		<Schema
 			item={{
@@ -46,14 +47,13 @@ const showDetails = await spotifyClient.shows.get(
 					name: showDetails.publisher,
 				},
 				inLanguage: showDetails.languages[0],
-				numberOfEpisodes: showDetails.total_episodes,
 				webFeed: showDetails.external_urls.spotify,
 				alternateName: "NoBuddies",
 			}}
 		/>
 	</head>
 	<body class="h-full">
-		<section class="h-screen grid grid-rows-[1fr,auto] overflow-hidden">
+		<main class="h-screen grid grid-rows-[1fr,auto] overflow-hidden">
 			<div class="relative">
 				<Image
 					src={heroImage}
@@ -61,6 +61,7 @@ const showDetails = await spotifyClient.shows.get(
 					widths={[640, 768, 1024, 1280, 1536]}
 					sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
 					class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+					loading="eager"
 				/>
 				<div class="flex items-center justify-center h-full">
 					<div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
@@ -71,9 +72,7 @@ const showDetails = await spotifyClient.shows.get(
 				</div>
 			</div>
 
-			<div>
-				<PodcastLinks />
-			</div>
-		</section>
+			<PodcastLinks />
+		</main>
 	</body>
 </html>
