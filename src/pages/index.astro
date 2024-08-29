@@ -53,23 +53,25 @@ const showDetails = await spotifyClient.shows.get(
 		/>
 	</head>
 	<body class="h-full">
-		<section
-			class="relative h-screen flex items-center justify-center overflow-hidden"
-		>
-			<Image
-				src={heroImage}
-				alt="Hero background"
-				widths={[640, 768, 1024, 1280, 1536]}
-				sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
-				class="absolute top-0 left-0 w-full h-full object-cover -z-10"
-			/>
-			<div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
-				<h1 class="sr-only">Jenovas Vitner</h1>
+		<section class="h-screen grid grid-rows-[1fr,auto] overflow-hidden">
+			<div class="relative">
+				<Image
+					src={heroImage}
+					alt="Hero background"
+					widths={[640, 768, 1024, 1280, 1536]}
+					sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
+					class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+				/>
+				<div class="flex items-center justify-center h-full">
+					<div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
+						<h1 class="sr-only">Jenovas Vitner</h1>
 
-				<SpotifyEmbed />
+						<SpotifyEmbed />
+					</div>
+				</div>
 			</div>
 
-			<div class="absolute bottom-0 left-0 right-0">
+			<div>
 				<PodcastLinks />
 			</div>
 		</section>
