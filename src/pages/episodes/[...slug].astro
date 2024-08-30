@@ -1,8 +1,11 @@
 ---
+import Hosts from "@/components/Hosts.astro";
 import Layout from "@/components/Layout.astro";
+import PodcastLinks from "@/components/PodcastLinks.astro";
 import SpotifyEmbedEpisode from "@/components/SpotifyEmbedEpisode.astro";
-import { getEpisodeDetails, getShowDetails } from "@/lib/spotify";
 import { authors, slugify } from "@/lib/meta";
+import { getEpisodeDetails, getShowDetails } from "@/lib/spotify";
+import { formatDate, formatDuration } from "@/lib/time";
 import { Schema } from "astro-seo-schema";
 
 export async function getStaticPaths() {
@@ -32,8 +35,10 @@ const episodeDetails = await getEpisodeDetails(id);
 		<meta name="twitter:image" content={episodeDetails.images[0].url} />
 		<!-- TODO: astro-seo -->
 		<meta name="twitter:site" content="@rad_crew" />
+		<meta name="twitter:creator" content="@rad_crew" />
 		<meta name="twitter:creator" content="@arodem" />
 		<meta name="twitter:creator" content="@MuffensKarl" />
+		<title>{episodeDetails.name}</title>
 
 		<Schema
 			item={{
@@ -59,18 +64,23 @@ const episodeDetails = await getEpisodeDetails(id);
 		/>
 	</Fragment>
 
-	<div class="max-w-3xl mx-auto px-4 py-8">
+	<article class="prose max-w-3xl mx-auto px-4 py-8">
+		<a
+			href="/"
+			class="inline-block mb-4 text-blue-600 hover:text-blue-800 transition-colors"
+		>
+			&larr; Tilbake til hovedsiden
+		</a>
+
 		<h1 class="text-3xl font-bold mb-4">{episodeDetails.name}</h1>
 		<SpotifyEmbedEpisode title={episodeDetails.name} id={id} />
 
 		<div class="mt-6">
 			<p class="text-sm text-gray-600">
-				Utgitt {
-					new Date(episodeDetails.release_date).toLocaleDateString("no-NO")
-				}
-				• {Math.floor(episodeDetails.duration_ms / 60000)} minutter
+				Utgitt {formatDate(episodeDetails.release_date)}
+				• {formatDuration(episodeDetails.duration_ms)}
 			</p>
-			<p class="mt-4">{episodeDetails.description}</p>
+			<div class="mt-4">{episodeDetails.description}</div>
 		</div>
 
 		{
@@ -80,5 +90,7 @@ const episodeDetails = await getEpisodeDetails(id);
 				</p>
 			)
 		}
-	</div>
+	</article>
+	<PodcastLinks />
+	<Hosts />
 </Layout>
