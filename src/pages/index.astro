@@ -6,6 +6,7 @@ import SpotifyEmbed from "@/components/SpotifyEmbed.astro";
 import { spotifyClient } from "@/lib/spotify";
 import { Schema } from "astro-seo-schema";
 import Favicons from "@/components/Favicons.astro";
+import Episodes from "@/components/Episodes.astro";
 
 const showDetails = await spotifyClient.shows.get(
 	"0jxTtqiycCBwCcXGqGawoa",
@@ -68,6 +69,8 @@ const showDetails = await spotifyClient.shows.get(
 
 						<SpotifyEmbed />
 						<PodcastLinks />
+
+						<Episodes episodes={showDetails.episodes.items} />
 					</div>
 				</div>
 			</div>
