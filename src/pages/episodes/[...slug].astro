@@ -1,0 +1,84 @@
+---
+import Layout from "@/components/Layout.astro";
+import SpotifyEmbedEpisode from "@/components/SpotifyEmbedEpisode.astro";
+import { getEpisodeDetails, getShowDetails } from "@/lib/spotify";
+import { authors, slugify } from "@/lib/meta";
+import { Schema } from "astro-seo-schema";
+
+export async function getStaticPaths() {
+	const showDetails = await getShowDetails();
+
+	return showDetails.episodes.items.map((entry) => ({
+		params: { slug: slugify(entry.name) },
+		props: { id: entry.id },
+	}));
+}
+
+const { id } = Astro.props;
+const episodeDetails = await getEpisodeDetails(id);
+---
+
+<Layout>
+	<Fragment slot="head">
+		<meta name="description" content={episodeDetails.description} />
+		<meta property="og:title" content={episodeDetails.name} />
+		<meta property="og:description" content={episodeDetails.description} />
+		<meta property="og:image" content={episodeDetails.images[0].url} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={episodeDetails.name} />
+		<meta name="twitter:description" content={episodeDetails.description} />
+		<meta name="twitter:image" content={episodeDetails.images[0].url} />
+		<!-- TODO: astro-seo -->
+		<meta name="twitter:site" content="@rad_crew" />
+		<meta name="twitter:creator" content="@arodem" />
+		<meta name="twitter:creator" content="@MuffensKarl" />
+
+		<Schema
+			item={{
+				"@context": "https://schema.org",
+				"@type": "PodcastEpisode",
+				name: episodeDetails.name,
+				description: episodeDetails.description,
+				image: episodeDetails.images[0].url,
+				url: Astro.url.toString(),
+				datePublished: episodeDetails.release_date,
+				timeRequired: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
+				associatedMedia: {
+					"@type": "AudioObject",
+					contentUrl: episodeDetails.audio_preview_url,
+				},
+				partOfSeries: {
+					"@type": "PodcastSeries",
+					name: episodeDetails.show.name,
+					url: episodeDetails.show.external_urls.spotify,
+				},
+				author: authors,
+			}}
+		/>
+	</Fragment>
+
+	<div class="max-w-3xl mx-auto px-4 py-8">
+		<h1 class="text-3xl font-bold mb-4">{episodeDetails.name}</h1>
+		<SpotifyEmbedEpisode title={episodeDetails.name} id={id} />
+
+		<div class="mt-6">
+			<p class="text-sm text-gray-600">
+				Utgitt {
+					new Date(episodeDetails.release_date).toLocaleDateString("no-NO")
+				}
+				• {Math.floor(episodeDetails.duration_ms / 60000)} minutter
+			</p>
+			<p class="mt-4">{episodeDetails.description}</p>
+		</div>
+
+		{
+			episodeDetails.explicit && (
+				<p class="mt-4 text-red-600 font-semibold">
+					Denne episoden inneholder eksplisitt innhold.
+				</p>
+			)
+		}
+	</div>
+</Layout>

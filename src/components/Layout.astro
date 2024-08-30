@@ -1,0 +1,21 @@
+---
+import Favicons from "@/components/Favicons.astro";
+---
+
+<html lang="no" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <Favicons />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={Astro.url} />
+    <title>Jenovas Vitner</title>
+
+    <slot name="head" />
+  </head>
+  <body class="h-full bg-slate-900 text-white">
+    <main class="h-[100dvh] container mx-auto px-4">
+      <slot />
+    </main>
+  </body>
+</html>
