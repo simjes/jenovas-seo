@@ -39,7 +39,7 @@ const showDetails = await getShowDetails();
 				name: showDetails.name,
 				description: showDetails.description,
 				image: showDetails.images[0].url,
-				url: Astro.site?.toString(),
+				url: Astro.site?.toString(), //TODO: Url of the item -> spotify?
 				publisher: {
 					"@type": "Organization",
 					name: showDetails.publisher,

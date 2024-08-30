@@ -49,7 +49,7 @@ const episodeDetails = await getEpisodeDetails(id);
 				description: episodeDetails.description,
 				episodeNumber,
 				image: episodeDetails.images[0].url,
-				url: Astro.site?.toString(),
+				url: Astro.site?.toString(), // TODO: Url of the item -> spotify?
 				datePublished: episodeDetails.release_date,
 				duration: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
 				associatedMedia: {

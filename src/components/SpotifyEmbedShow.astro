@@ -1,13 +1,11 @@
 ---
+const SPOTIFY_OEMBED_URL = "https://open.spotify.com/oembed";
+const SHOW_URL = "https://open.spotify.com/show/0jxTtqiycCBwCcXGqGawoa";
 
+const response = await fetch(
+  `${SPOTIFY_OEMBED_URL}?url=${SHOW_URL}&format=json&height=352`,
+);
+const data = await response.json();
 ---
 
-<div class="h-[352px] rounded-xl overflow-hidden">
-  <iframe
-    title="Jenovas Vitner Spotify"
-    class="w-full h-full border-none"
-    src="https://open.spotify.com/embed/show/0jxTtqiycCBwCcXGqGawoa?utm_source=generator&theme=0&t=0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"></iframe>
-</div>
+<div class="h-[352px] rounded-xl overflow-hidden" set:html={data.html} />
