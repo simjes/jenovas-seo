@@ -10,14 +10,15 @@ import { Schema } from "astro-seo-schema";
 
 export async function getStaticPaths() {
 	const showDetails = await getShowDetails();
+	const totalEpisodes = showDetails.total_episodes;
 
-	return showDetails.episodes.items.map((entry) => ({
+	return showDetails.episodes.items.map((entry, index) => ({
 		params: { slug: slugify(entry.name) },
-		props: { id: entry.id },
+		props: { id: entry.id, episodeNumber: totalEpisodes - index },
 	}));
 }
 
-const { id } = Astro.props;
+const { id, episodeNumber } = Astro.props;
 const episodeDetails = await getEpisodeDetails(id);
 ---
 
@@ -46,10 +47,11 @@ const episodeDetails = await getEpisodeDetails(id);
 				"@type": "PodcastEpisode",
 				name: episodeDetails.name,
 				description: episodeDetails.description,
+				episodeNumber,
 				image: episodeDetails.images[0].url,
 				url: Astro.url.toString(),
 				datePublished: episodeDetails.release_date,
-				timeRequired: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
+				duration: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
 				associatedMedia: {
 					"@type": "AudioObject",
 					contentUrl: episodeDetails.audio_preview_url,
