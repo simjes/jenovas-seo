@@ -29,7 +29,7 @@ const episodeDetails = await getEpisodeDetails(id);
 		<meta property="og:description" content={episodeDetails.description} />
 		<meta property="og:image" content={episodeDetails.images[0].url} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url} />
+		<meta property="og:url" content={Astro.site} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={episodeDetails.name} />
 		<meta name="twitter:description" content={episodeDetails.description} />
@@ -49,7 +49,7 @@ const episodeDetails = await getEpisodeDetails(id);
 				description: episodeDetails.description,
 				episodeNumber,
 				image: episodeDetails.images[0].url,
-				url: Astro.url.toString(),
+				url: Astro.site?.toString(),
 				datePublished: episodeDetails.release_date,
 				duration: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
 				associatedMedia: {

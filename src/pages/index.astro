@@ -20,7 +20,7 @@ const showDetails = await getShowDetails();
 		<meta property="og:description" content={showDetails.description} />
 		<meta property="og:image" content={showDetails.images[0].url} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url} />
+		<meta property="og:url" content={Astro.site} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={showDetails.name} />
 		<meta name="twitter:description" content={showDetails.description} />
@@ -39,7 +39,7 @@ const showDetails = await getShowDetails();
 				name: showDetails.name,
 				description: showDetails.description,
 				image: showDetails.images[0].url,
-				url: Astro.url.toString(),
+				url: Astro.site?.toString(),
 				publisher: {
 					"@type": "Organization",
 					name: showDetails.publisher,
