@@ -6,6 +6,7 @@ import SpotifyEmbedEpisode from "@/components/SpotifyEmbedEpisode.astro";
 import { authors, slugify } from "@/lib/meta";
 import { getEpisodeDetails, getShowDetails } from "@/lib/spotify";
 import { formatDate, formatDuration } from "@/lib/time";
+import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
 
 export async function getStaticPaths() {
@@ -24,22 +25,28 @@ const episodeDetails = await getEpisodeDetails(id);
 
 <Layout>
 	<Fragment slot="head">
-		<meta name="description" content={episodeDetails.description} />
-		<meta property="og:title" content={episodeDetails.name} />
-		<meta property="og:description" content={episodeDetails.description} />
-		<meta property="og:image" content={episodeDetails.images[0].url} />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url.toString()} />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={episodeDetails.name} />
-		<meta name="twitter:description" content={episodeDetails.description} />
-		<meta name="twitter:image" content={episodeDetails.images[0].url} />
-		<!-- TODO: astro-seo -->
-		<meta name="twitter:site" content="@rad_crew" />
-		<meta name="twitter:creator" content="@rad_crew" />
-		<meta name="twitter:creator" content="@arodem" />
-		<meta name="twitter:creator" content="@MuffensKarl" />
-		<title>{episodeDetails.name}</title>
+		<SEO
+			title={episodeDetails.name}
+			description={episodeDetails.description}
+			openGraph={{
+				basic: {
+					title: episodeDetails.name,
+					type: "website",
+					image: episodeDetails.images[0].url,
+					url: Astro.url.toString(),
+				},
+				optional: {
+					description: episodeDetails.description,
+				},
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "@rad_crew",
+				title: episodeDetails.name,
+				description: episodeDetails.description,
+				image: episodeDetails.images[0].url,
+			}}
+		/>
 
 		<Schema
 			item={{
@@ -49,7 +56,7 @@ const episodeDetails = await getEpisodeDetails(id);
 				description: episodeDetails.description,
 				episodeNumber,
 				image: episodeDetails.images[0].url,
-				url: Astro.site?.toString(), // TODO: Url of the item -> spotify?
+				url: Astro.url.toString(),
 				datePublished: episodeDetails.release_date,
 				duration: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
 				associatedMedia: {

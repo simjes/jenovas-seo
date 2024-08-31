@@ -1,37 +1,43 @@
 ---
 import Episodes from "@/components/Episodes.astro";
+import Hosts from "@/components/Hosts.astro";
 import Layout from "@/components/Layout.astro";
 import PodcastLinks from "@/components/PodcastLinks.astro";
-import SpotifyEmbed from "@/components/SpotifyEmbedShow.astro";
+import SpotifyCard from "@/components/SpotifyCard.astro";
+import { authors } from "@/lib/meta";
 import { getShowDetails } from "@/lib/spotify";
+import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero.jpg";
-import { authors } from "@/lib/meta";
-import Hosts from "@/components/Hosts.astro";
-import SpotifyCard from "@/components/SpotifyCard.astro";
 
 const showDetails = await getShowDetails();
 ---
 
 <Layout>
 	<Fragment slot="head">
-		<meta name="description" content={showDetails.description} />
-		<meta property="og:title" content={showDetails.name} />
-		<meta property="og:description" content={showDetails.description} />
-		<meta property="og:image" content={showDetails.images[0].url} />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url.toString()} />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={showDetails.name} />
-		<meta name="twitter:description" content={showDetails.description} />
-		<meta name="twitter:image" content={showDetails.images[0].url} />
-		<!-- TODO: astro-seo -->
-		<meta name="twitter:site" content="@rad_crew" />
-		<meta name="twitter:creator" content="@rad_crew" />
-		<meta name="twitter:creator" content="@arodem" />
-		<meta name="twitter:creator" content="@MuffensKarl" />
-		<title>Jenovas Vitner</title>
+		<SEO
+			title="Jenovas Vitner"
+			description={showDetails.description}
+			openGraph={{
+				basic: {
+					title: showDetails.name,
+					type: "website",
+					image: showDetails.images[0].url,
+					url: Astro.url.toString(),
+				},
+				optional: {
+					description: showDetails.description,
+				},
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "@rad_crew",
+				title: showDetails.name,
+				description: showDetails.description,
+				image: showDetails.images[0].url,
+			}}
+		/>
 
 		<Schema
 			item={{
@@ -40,7 +46,7 @@ const showDetails = await getShowDetails();
 				name: showDetails.name,
 				description: showDetails.description,
 				image: showDetails.images[0].url,
-				url: Astro.site?.toString(), //TODO: Url of the item -> spotify?
+				url: Astro.url.toString(),
 				publisher: {
 					"@type": "Organization",
 					name: showDetails.publisher,
@@ -67,7 +73,6 @@ const showDetails = await getShowDetails();
 			<div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
 				<h1 class="sr-only">Jenovas Vitner</h1>
 
-				<!-- <SpotifyEmbed /> -->
 				<SpotifyCard
 					link={showDetails.external_urls.spotify}
 					title={showDetails.name}
