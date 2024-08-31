@@ -8,6 +8,7 @@ import { getEpisodeDetails, getShowDetails } from "@/lib/spotify";
 import { formatDate, formatDuration } from "@/lib/time";
 import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
+import { ArrowLeft, ArrowRight } from "lucide-astro";
 
 export async function getStaticPaths() {
 	const showDetails = await getShowDetails();
@@ -15,11 +16,30 @@ export async function getStaticPaths() {
 
 	return showDetails.episodes.items.map((entry, index) => ({
 		params: { slug: slugify(entry.name) },
-		props: { id: entry.id, episodeNumber: totalEpisodes - index },
+		props: {
+			id: entry.id,
+			episodeNumber: totalEpisodes - index,
+			next:
+				index > 0
+					? {
+							slug: slugify(showDetails.episodes.items[index - 1].name),
+							episodeNumber: totalEpisodes - index + 1,
+							name: showDetails.episodes.items[index - 1].name,
+						}
+					: undefined,
+			previous:
+				index < showDetails.episodes.items.length - 1
+					? {
+							slug: slugify(showDetails.episodes.items[index + 1].name),
+							episodeNumber: totalEpisodes - index - 1,
+							name: showDetails.episodes.items[index + 1].name,
+						}
+					: undefined,
+		},
 	}));
 }
 
-const { id, episodeNumber } = Astro.props;
+const { id, episodeNumber, next, previous } = Astro.props;
 const episodeDetails = await getEpisodeDetails(id);
 ---
 
@@ -78,7 +98,7 @@ const episodeDetails = await getEpisodeDetails(id);
 			href="/"
 			class="inline-block mb-4 text-blue-600 hover:text-blue-800 transition-colors"
 		>
-			&larr; Tilbake til hovedsiden
+			&larr; Tilbake til episodeoversikten
 		</a>
 
 		<h1 class="text-3xl font-bold mb-4">{episodeDetails.name}</h1>
@@ -95,11 +115,52 @@ const episodeDetails = await getEpisodeDetails(id);
 		{
 			episodeDetails.explicit && (
 				<p class="mt-4 text-red-600 font-semibold">
-					Denne episoden inneholder eksplisitt innhold.
+					Denne episoden har eksplisitt innhold.
 				</p>
 			)
 		}
 	</article>
+
+	<nav
+		class="flex flex-col sm:flex-row justify-between items-stretch gap-4 my-8"
+	>
+		{
+			previous ? (
+				<a
+					href={`/episodes/${previous.slug}`}
+					class="flex flex-col items-start p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1"
+				>
+					<span class="text-sm text-muted-foreground mb-2 flex items-center">
+						<ArrowLeft class="w-4 h-4 mr-1" />
+						Forrige episode
+					</span>
+					<span class="font-semibold">
+						{previous.episodeNumber}. {previous.name}
+					</span>
+				</a>
+			) : (
+				<div class="flex-1" />
+			)
+		}
+		{
+			next ? (
+				<a
+					href={`/episodes/${next.slug}`}
+					class="flex flex-col items-end p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1 text-right"
+				>
+					<span class="text-sm text-muted-foreground mb-2 flex items-center">
+						Neste episode
+						<ArrowRight class="w-4 h-4 ml-1" />
+					</span>
+					<span class="font-semibold">
+						{next.episodeNumber}. {next.name}
+					</span>
+				</a>
+			) : (
+				<div class="flex-1" />
+			)
+		}
+	</nav>
 	<PodcastLinks />
 	<Hosts />
 </Layout>
