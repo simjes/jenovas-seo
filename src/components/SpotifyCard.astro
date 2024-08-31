@@ -1,0 +1,39 @@
+---
+import { Play, MoreHorizontal, Plus } from "lucide-astro";
+
+interface Props {
+  link: string;
+  title: string;
+  date: string;
+  showName: string;
+  duration: string;
+  imageUrl: string;
+}
+
+const { title, date, showName, duration, imageUrl, link } = Astro.props;
+---
+
+<a href={link} target="_blank" class="block max-w-2xl mx-auto p-4">
+  <div class="bg-[#121212] text-white rounded-lg overflow-hidden shadow-lg">
+    <div class="flex flex-col sm:flex-row">
+      <div class="sm:w-1/3 p-4">
+        <!-- TODO: image component -->
+        <img
+          src={imageUrl}
+          alt={`${title} Podcast Cover`}
+          class="w-full h-auto rounded-md"
+        />
+      </div>
+      <div class="sm:w-2/3 p-4">
+        <h2 class="text-2xl font-bold mb-2">{title}</h2>
+        <p class="text-gray-400 mb-2">{date} · {showName}</p>
+        <button
+          class="text-white bg-[#1DB954] hover:bg-[#1ed760] transition-colors duration-200 font-bold py-2 px-4 rounded-full inline-flex items-center"
+        >
+          <Play class="w-5 h-5 mr-2" />
+          Spill på Spotify
+        </button>
+      </div>
+    </div>
+  </div>
+</a>

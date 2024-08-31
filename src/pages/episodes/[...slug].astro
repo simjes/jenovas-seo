@@ -29,7 +29,7 @@ const episodeDetails = await getEpisodeDetails(id);
 		<meta property="og:description" content={episodeDetails.description} />
 		<meta property="og:image" content={episodeDetails.images[0].url} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.site} />
+		<meta property="og:url" content={Astro.url.toString()} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={episodeDetails.name} />
 		<meta name="twitter:description" content={episodeDetails.description} />

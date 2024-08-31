@@ -9,6 +9,7 @@ import { Image } from "astro:assets";
 import heroImage from "../assets/hero.jpg";
 import { authors } from "@/lib/meta";
 import Hosts from "@/components/Hosts.astro";
+import SpotifyCard from "@/components/SpotifyCard.astro";
 
 const showDetails = await getShowDetails();
 ---
@@ -20,7 +21,7 @@ const showDetails = await getShowDetails();
 		<meta property="og:description" content={showDetails.description} />
 		<meta property="og:image" content={showDetails.images[0].url} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.site} />
+		<meta property="og:url" content={Astro.url.toString()} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={showDetails.name} />
 		<meta name="twitter:description" content={showDetails.description} />
@@ -66,7 +67,15 @@ const showDetails = await getShowDetails();
 			<div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
 				<h1 class="sr-only">Jenovas Vitner</h1>
 
-				<SpotifyEmbed />
+				<!-- <SpotifyEmbed /> -->
+				<SpotifyCard
+					link={showDetails.external_urls.spotify}
+					title={showDetails.name}
+					date={"test"}
+					showName={showDetails.name}
+					duration={"ts"}
+					imageUrl={showDetails.images[0].url}
+				/>
 				<PodcastLinks />
 
 				<Hosts />
