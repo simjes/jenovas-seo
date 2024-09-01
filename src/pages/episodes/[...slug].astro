@@ -110,6 +110,7 @@ const episodeDetails = await getEpisodeDetails(id);
           imageUrl={episodeDetails.images[0].url}
           description={`Utgitt ${formatDate(episodeDetails.release_date)}
           • ${formatDuration(episodeDetails.duration_ms)}`}
+          loading="eager"
         />
       </div>
 
@@ -117,9 +118,9 @@ const episodeDetails = await getEpisodeDetails(id);
     </section>
 
     <section>
-      <h2>Vertene</h2>
+      <h2>Presentert av</h2>
       <div class="not-prose">
-        <Hosts />
+        <Hosts loading="eager" />
       </div>
     </section>
 

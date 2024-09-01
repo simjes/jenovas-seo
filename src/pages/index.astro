@@ -64,6 +64,7 @@ const showDetails = await getShowDetails();
       title={showDetails.name}
       description={showDetails.description}
       imageUrl={showDetails.images[0].url}
+      loading="eager"
     />
 
     <div class="flex gap-4 flex-wrap">
@@ -72,8 +73,8 @@ const showDetails = await getShowDetails();
     </div>
 
     <div>
-      <h2 class="text-2xl font-bold mb-2 text-center">Verter</h2>
-      <Hosts />
+      <h2 class="text-2xl font-bold mb-2 text-center">Presentert av</h2>
+      <Hosts loading="eager" />
     </div>
 
     <div>

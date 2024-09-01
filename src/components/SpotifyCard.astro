@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { Play } from "lucide-astro";
 
 interface Props {
@@ -6,20 +7,23 @@ interface Props {
   title: string;
   description?: string;
   imageUrl: string;
+  loading?: "eager" | "lazy";
 }
 
-const { title, description, imageUrl, link } = Astro.props;
+const { title, description, imageUrl, link, loading = "lazy" } = Astro.props;
 ---
 
 <a href={link} target="_blank" class="block">
   <div class="bg-[#121212] text-white rounded-lg overflow-hidden shadow-lg">
     <div class="flex flex-col sm:flex-row">
-      <div class="sm:w-1/3 p-4">
-        <!-- TODO: image component -->
-        <img
+      <div class="flex justify-center sm:w-1/3 p-4">
+        <Image
           src={imageUrl}
           alt={`${title} Podcast Cover`}
-          class="w-full h-auto rounded-md"
+          class="aspect-square rounded-md"
+          width={450}
+          height={450}
+          loading={loading}
         />
       </div>
       <div class="sm:w-2/3 p-4 text-left">

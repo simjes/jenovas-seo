@@ -33,6 +33,11 @@ const podcastHosts = [
     image: karlImage,
   },
 ] satisfies PodcastHost[];
+
+type Props = {
+  loading?: "eager" | "lazy";
+};
+const { loading = "lazy" } = Astro.props;
 ---
 
 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -42,9 +47,10 @@ const podcastHosts = [
         <Image
           src={host.image}
           alt={host.name}
-          width={48}
-          height={48}
+          width={96}
+          height={96}
           class="rounded-full"
+          loading={loading}
         />
       </PodcastHost>
     ))

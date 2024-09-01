@@ -22,7 +22,6 @@ export const PodcastHost = ({ name, handle, link, children }: Props) => (
           <div className="h-10 w-10 sm:h-12 sm:w-12">{children}</div>
 
           <div className="text-left">
-            {/* TODO: verify h3 */}
             <h3 className="font-semibold text-sm sm:text-base">{name}</h3>
             <div className="text-xs sm:text-sm text-muted-foreground">
               @{handle}

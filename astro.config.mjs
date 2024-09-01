@@ -10,5 +10,8 @@ export default defineConfig({
   site: 'https://jenovas-seo.vercel.app/', // TODO: to be changed
   integrations: [react(), tailwind({
     applyBaseStyles: false,
-  })]
+  })],
+  image: {
+    domains: ["i.scdn.co"],
+  }
 });
