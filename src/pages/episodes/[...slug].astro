@@ -2,12 +2,15 @@
 import EpisodeNavigation from "@/components/EpisodeNavigation.astro";
 import Hosts from "@/components/Hosts.astro";
 import Layout from "@/components/Layout.astro";
-import SpotifyEmbedEpisode from "@/components/SpotifyEmbedEpisode.astro";
+import PlayPodcastApple from "@/components/PlayPodcastApple.astro";
+import PlayPodcastRadCrew from "@/components/PlayPodcastRadCrew.astro";
+import SpotifyCard from "@/components/SpotifyCard.astro";
 import { authors, slugify } from "@/lib/meta";
 import { getEpisodeDetails, getShowDetails } from "@/lib/spotify";
 import { formatDate, formatDuration } from "@/lib/time";
 import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
+import { ArrowLeft } from "lucide-astro";
 
 export async function getStaticPaths() {
   const showDetails = await getShowDetails();
@@ -90,33 +93,27 @@ const episodeDetails = await getEpisodeDetails(id);
     />
   </Fragment>
 
-  <article class="prose max-w-3xl mx-auto px-4 py-8">
+  <article class="prose max-w-4xl py-8">
     <a
       href="/"
-      class="inline-block mb-4 text-blue-600 hover:text-blue-800 transition-colors"
+      class="not-prose flex gap-1 items-center mb-4 text-blue-600 hover:text-blue-800 transition-colors"
     >
-      &larr; Tilbake til episodeoversikten
+      <ArrowLeft class="w-4 h-4" />
+      <span>Tilbake til episodeoversikten </span>
     </a>
 
     <section>
-      <h1 class="text-3xl font-bold mb-4">{episodeDetails.name}</h1>
-      <SpotifyEmbedEpisode title={episodeDetails.name} id={id} />
-
-      <div class="mt-6">
-        <p class="text-sm text-gray-600">
-          Utgitt {formatDate(episodeDetails.release_date)}
-          • {formatDuration(episodeDetails.duration_ms)}
-        </p>
-        <div class="mt-4">{episodeDetails.description}</div>
+      <div class="not-prose">
+        <SpotifyCard
+          link={episodeDetails.external_urls.spotify}
+          title={`${episodeNumber}. ${episodeDetails.name}`}
+          imageUrl={episodeDetails.images[0].url}
+          description={`Utgitt ${formatDate(episodeDetails.release_date)}
+          • ${formatDuration(episodeDetails.duration_ms)}`}
+        />
       </div>
 
-      {
-        episodeDetails.explicit && (
-          <p class="mt-4 text-red-600 font-semibold">
-            Denne episoden har eksplisitt innhold.
-          </p>
-        )
-      }
+      <p>{episodeDetails.description}</p>
     </section>
 
     <section>
@@ -127,7 +124,7 @@ const episodeDetails = await getEpisodeDetails(id);
     </section>
 
     <nav
-      class="not-prose flex flex-col sm:flex-row justify-between items-stretch gap-4 my-8"
+      class="not-prose flex flex-col sm:flex-row justify-between items-stretch gap-4 mt-16"
     >
       {
         previous ? (
@@ -152,5 +149,13 @@ const episodeDetails = await getEpisodeDetails(id);
         )
       }
     </nav>
+
+    <section>
+      <h2>Du finner også episodene på disse tjenestene</h2>
+      <div class="not-prose flex gap-4 flex-wrap">
+        <PlayPodcastApple />
+        <PlayPodcastRadCrew />
+      </div>
+    </section>
   </article>
 </Layout>

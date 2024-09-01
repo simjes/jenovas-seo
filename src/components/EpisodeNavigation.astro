@@ -16,6 +16,7 @@ const { direction, name, slug } = Astro.props;
     "flex flex-col items-start p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1",
     direction === "next" && "items-end"
   )}
+  data-astro-prefetch
 >
   <div class="text-sm text-muted-foreground mb-2 flex items-center">
     {
@@ -35,7 +36,7 @@ const { direction, name, slug } = Astro.props;
       )
     }
   </div>
-  <span class="font-semibold">
+  <span class={cn("font-semibold", direction === "next" && "text-right")}>
     {name}
   </span>
 </a>

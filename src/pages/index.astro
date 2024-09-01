@@ -1,6 +1,5 @@
 ---
 import EpisodeLink from "@/components/EpisodeLink.astro";
-import Episodes from "@/components/EpisodeLink.astro";
 import Hosts from "@/components/Hosts.astro";
 import Layout from "@/components/Layout.astro";
 import PlayPodcastApple from "@/components/PlayPodcastApple.astro";
@@ -60,8 +59,6 @@ const showDetails = await getShowDetails();
   </Fragment>
 
   <div class="flex flex-col items-center h-full gap-10 mt-20">
-    <h1 class="sr-only">Jenovas Vitner Podcast</h1>
-
     <SpotifyCard
       link={showDetails.external_urls.spotify}
       title={showDetails.name}
@@ -81,7 +78,8 @@ const showDetails = await getShowDetails();
 
     <div>
       <h2 class="text-2xl font-bold mb-2 text-center">Episoder</h2>
-      <div class="w-full max-w-4xl mx-auto">
+
+      <nav class="w-full max-w-4xl mx-auto">
         <ul class="flex flex-col gap-4">
           {
             showDetails.episodes.items.map((episode, index) => (
@@ -96,7 +94,7 @@ const showDetails = await getShowDetails();
             ))
           }
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
 </Layout>
