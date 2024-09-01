@@ -1,15 +1,15 @@
 ---
-import Episodes from "@/components/Episodes.astro";
+import EpisodeLink from "@/components/EpisodeLink.astro";
+import Episodes from "@/components/EpisodeLink.astro";
 import Hosts from "@/components/Hosts.astro";
 import Layout from "@/components/Layout.astro";
-import PodcastLinks from "@/components/PodcastLinks.astro";
+import PlayPodcastApple from "@/components/PlayPodcastApple.astro";
+import PlayPodcastRadCrew from "@/components/PlayPodcastRadCrew.astro";
 import SpotifyCard from "@/components/SpotifyCard.astro";
 import { authors } from "@/lib/meta";
 import { getShowDetails } from "@/lib/spotify";
 import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
-import { Image } from "astro:assets";
-import heroImage from "../assets/hero.jpg";
 
 const showDetails = await getShowDetails();
 ---
@@ -59,33 +59,43 @@ const showDetails = await getShowDetails();
     />
   </Fragment>
 
-  <div class="h-full grid grid-rows-[1fr,auto] overflow-hidden">
-    <!-- TODO: sjekk hero image optimization + fix layout med grid i stedet for absolute -->
-    <Image
-      src={heroImage}
-      alt="Hero background"
-      widths={[640, 768, 1024, 1280, 1536]}
-      sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
-      class="absolute left-0 w-full h-full object-cover -z-10"
-      loading="eager"
+  <div class="flex flex-col items-center h-full gap-10 mt-20">
+    <h1 class="sr-only">Jenovas Vitner Podcast</h1>
+
+    <SpotifyCard
+      link={showDetails.external_urls.spotify}
+      title={showDetails.name}
+      description={showDetails.description}
+      imageUrl={showDetails.images[0].url}
     />
-    <div class="flex items-center justify-center h-full">
-      <div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
-        <h1 class="sr-only">Jenovas Vitner</h1>
 
-        <SpotifyCard
-          link={showDetails.external_urls.spotify}
-          title={showDetails.name}
-          date={"test"}
-          showName={showDetails.name}
-          duration={"ts"}
-          imageUrl={showDetails.images[0].url}
-        />
-        <PodcastLinks />
+    <div class="flex gap-4 flex-wrap">
+      <PlayPodcastApple />
+      <PlayPodcastRadCrew />
+    </div>
 
-        <Hosts />
+    <div>
+      <h2 class="text-2xl font-bold mb-2 text-center">Verter</h2>
+      <Hosts />
+    </div>
 
-        <Episodes episodes={showDetails.episodes.items} />
+    <div>
+      <h2 class="text-2xl font-bold mb-2 text-center">Episoder</h2>
+      <div class="w-full max-w-4xl mx-auto">
+        <ul class="flex flex-col gap-4">
+          {
+            showDetails.episodes.items.map((episode, index) => (
+              <li>
+                <EpisodeLink
+                  name={episode.name}
+                  number={showDetails.episodes.items.length - index}
+                  release={episode.release_date}
+                  durationMs={episode.duration_ms}
+                />
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </div>

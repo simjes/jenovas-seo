@@ -2,14 +2,12 @@
 import EpisodeNavigation from "@/components/EpisodeNavigation.astro";
 import Hosts from "@/components/Hosts.astro";
 import Layout from "@/components/Layout.astro";
-import PodcastLinks from "@/components/PodcastLinks.astro";
 import SpotifyEmbedEpisode from "@/components/SpotifyEmbedEpisode.astro";
 import { authors, slugify } from "@/lib/meta";
 import { getEpisodeDetails, getShowDetails } from "@/lib/spotify";
 import { formatDate, formatDuration } from "@/lib/time";
 import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
-import { ArrowLeft, ArrowRight } from "lucide-astro";
 
 export async function getStaticPaths() {
   const showDetails = await getShowDetails();
@@ -155,6 +153,4 @@ const episodeDetails = await getEpisodeDetails(id);
       }
     </nav>
   </article>
-
-  <PodcastLinks />
 </Layout>
