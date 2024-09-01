@@ -1,9 +1,6 @@
 name: Check RSS Feed and Build
 
 on:
-  schedule:
-    # Runs every day at 12:00 PM Norwegian time (10:00 UTC)
-    - cron: "0 10 * * *"
   workflow_dispatch:
     # Allows manual triggering of the workflow
 
@@ -42,3 +39,7 @@ jobs:
         with:
           commit_message: "Update RSS feed"
           file_pattern: "*.json"
+
+      - name: Log no changes
+        if: steps.check_changes.outputs.changes_detected == 'false'
+        run: echo "No changes found in RSS feed"
