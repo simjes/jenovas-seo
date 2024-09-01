@@ -8,7 +8,9 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "typecheck": "astro check"
+    "typecheck": "astro check",
+    "lint": "biome check ./src",
+    "lint:fix": "biome check --write ./src"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",

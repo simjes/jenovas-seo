@@ -25,6 +25,10 @@ jobs:
       - name: Run typecheck
         run: npm run typecheck
 
+      - name: Run lint
+        if: ${{ failure() || success() }}
+        run: npm run lint
+
       - name: Build project
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}

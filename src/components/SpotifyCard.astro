@@ -3,11 +3,11 @@ import { Image } from "astro:assets";
 import { Play } from "lucide-astro";
 
 interface Props {
-  link: string;
-  title: string;
-  description?: string;
-  imageUrl: string;
-  loading?: "eager" | "lazy";
+	link: string;
+	title: string;
+	description?: string;
+	imageUrl: string;
+	loading?: "eager" | "lazy";
 }
 
 const { title, description, imageUrl, link, loading = "lazy" } = Astro.props;

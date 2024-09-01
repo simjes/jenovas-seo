@@ -13,30 +13,30 @@ import { Schema } from "astro-seo-schema";
 import { ArrowLeft } from "lucide-astro";
 
 export async function getStaticPaths() {
-  const showDetails = await getShowDetails();
-  const totalEpisodes = showDetails.total_episodes;
+	const showDetails = await getShowDetails();
+	const totalEpisodes = showDetails.total_episodes;
 
-  return showDetails.episodes.items.map((entry, index) => ({
-    params: { slug: slugify(entry.name) },
-    props: {
-      id: entry.id,
-      episodeNumber: totalEpisodes - index,
-      next:
-        index > 0
-          ? {
-              slug: slugify(showDetails.episodes.items[index - 1].name),
-              name: `${totalEpisodes - index + 1}. ${showDetails.episodes.items[index - 1].name}`,
-            }
-          : undefined,
-      previous:
-        index < showDetails.episodes.items.length - 1
-          ? {
-              slug: slugify(showDetails.episodes.items[index + 1].name),
-              name: `${totalEpisodes - index - 1}. ${showDetails.episodes.items[index + 1].name}`,
-            }
-          : undefined,
-    },
-  }));
+	return showDetails.episodes.items.map((entry, index) => ({
+		params: { slug: slugify(entry.name) },
+		props: {
+			id: entry.id,
+			episodeNumber: totalEpisodes - index,
+			next:
+				index > 0
+					? {
+							slug: slugify(showDetails.episodes.items[index - 1].name),
+							name: `${totalEpisodes - index + 1}. ${showDetails.episodes.items[index - 1].name}`,
+						}
+					: undefined,
+			previous:
+				index < showDetails.episodes.items.length - 1
+					? {
+							slug: slugify(showDetails.episodes.items[index + 1].name),
+							name: `${totalEpisodes - index - 1}. ${showDetails.episodes.items[index + 1].name}`,
+						}
+					: undefined,
+		},
+	}));
 }
 
 const { id, episodeNumber, next, previous } = Astro.props;

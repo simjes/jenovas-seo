@@ -1,41 +1,41 @@
 ---
+import { Image } from "astro:assets";
 import audunImage from "@/assets/audun.png";
 import josteinImage from "@/assets/jostein.jpg";
 import karlImage from "@/assets/karl.png";
 import { authors } from "@/lib/meta";
-import { Image } from "astro:assets";
 import { PodcastHost } from "./PodcastHost";
 
-type PodcastHost = {
-  name: string;
-  link: string;
-  image: ImageMetadata;
-  handle: string;
+type Host = {
+	name: string;
+	link: string;
+	image: ImageMetadata;
+	handle: string;
 };
 
 const podcastHosts = [
-  {
-    name: authors[0].name,
-    link: authors[0].sameAs,
-    handle: "rad_crew",
-    image: josteinImage,
-  },
-  {
-    name: authors[1].name,
-    link: authors[1].sameAs,
-    handle: "arodem",
-    image: audunImage,
-  },
-  {
-    name: authors[2].name,
-    link: authors[2].sameAs,
-    handle: "MuffensKarl",
-    image: karlImage,
-  },
-] satisfies PodcastHost[];
+	{
+		name: authors[0].name,
+		link: authors[0].sameAs,
+		handle: "rad_crew",
+		image: josteinImage,
+	},
+	{
+		name: authors[1].name,
+		link: authors[1].sameAs,
+		handle: "arodem",
+		image: audunImage,
+	},
+	{
+		name: authors[2].name,
+		link: authors[2].sameAs,
+		handle: "MuffensKarl",
+		image: karlImage,
+	},
+] satisfies Host[];
 
 type Props = {
-  loading?: "eager" | "lazy";
+	loading?: "eager" | "lazy";
 };
 const { loading = "lazy" } = Astro.props;
 ---
