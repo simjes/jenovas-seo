@@ -1,0 +1,43 @@
+name: Check RSS Feed
+
+on:
+  schedule:
+    - cron: "0 10 * * *" # Runs at 10:00 UTC (12:00 Norway time) every day
+
+jobs:
+  check-rss:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch RSS Feed
+        uses: Promptly-Technologies-LLC/rss-fetch-action@v2
+        with:
+          feed_url: "https://www.radcrew.net/category/finalfantasy/feed"
+          file_path: "./latest-feed.json"
+
+      - name: Check if RSS feed has changed
+        id: check_changes
+        run: |
+          if git diff --exit-code ./latest-feed.json; then
+            echo "No changes detected in RSS feed"
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected in RSS feed"
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes to repository
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update RSS feed"
+          file_pattern: "*.json"
+
+      - name: Trigger build workflow
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: rss-updated
