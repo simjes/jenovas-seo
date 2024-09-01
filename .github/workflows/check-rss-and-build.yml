@@ -40,6 +40,12 @@ jobs:
           commit_message: "Update RSS feed"
           file_pattern: "*.json"
 
-      - name: Log no changes
-        if: steps.check_changes.outputs.changes_detected == 'false'
-        run: echo "No changes found in RSS feed"
+      - name: Deploy to Cloudflare Pages
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: jenovas-seo
+          directory: ./dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
