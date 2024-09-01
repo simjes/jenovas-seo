@@ -15,78 +15,78 @@ const showDetails = await getShowDetails();
 ---
 
 <Layout>
-	<Fragment slot="head">
-		<SEO
-			title="Jenovas Vitner"
-			description={showDetails.description}
-			openGraph={{
-				basic: {
-					title: showDetails.name,
-					type: "website",
-					image: showDetails.images[0].url,
-					url: Astro.url.toString(),
-				},
-				optional: {
-					description: showDetails.description,
-				},
-			}}
-			twitter={{
-				card: "summary_large_image",
-				site: "@rad_crew",
-				title: showDetails.name,
-				description: showDetails.description,
-				image: showDetails.images[0].url,
-			}}
-		/>
+  <Fragment slot="head">
+    <SEO
+      title={showDetails.name}
+      description={showDetails.description}
+      openGraph={{
+        basic: {
+          title: showDetails.name,
+          type: "website",
+          image: showDetails.images[0].url,
+          url: Astro.url.toString(),
+        },
+        optional: {
+          description: showDetails.description,
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@rad_crew",
+        title: showDetails.name,
+        description: showDetails.description,
+        image: showDetails.images[0].url,
+      }}
+    />
 
-		<Schema
-			item={{
-				"@context": "https://schema.org",
-				"@type": "PodcastSeries",
-				name: showDetails.name,
-				description: showDetails.description,
-				image: showDetails.images[0].url,
-				url: Astro.url.toString(),
-				publisher: {
-					"@type": "Organization",
-					name: showDetails.publisher,
-				},
-				inLanguage: showDetails.languages[0],
-				webFeed: "https://www.radcrew.net/category/finalfantasy/feed",
-				alternateName: "NoBuddies",
-				author: authors,
-			}}
-		/>
-	</Fragment>
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "PodcastSeries",
+        name: showDetails.name,
+        description: showDetails.description,
+        image: showDetails.images[0].url,
+        url: Astro.url.toString(),
+        publisher: {
+          "@type": "Organization",
+          name: showDetails.publisher,
+        },
+        inLanguage: showDetails.languages[0],
+        webFeed: "https://www.radcrew.net/category/finalfantasy/feed",
+        alternateName: "NoBuddies",
+        author: authors,
+      }}
+    />
+  </Fragment>
 
-	<div class="h-full grid grid-rows-[1fr,auto] overflow-hidden">
-		<!-- TODO: sjekk hero image optimization + fix layout med grid i stedet for absolute -->
-		<Image
-			src={heroImage}
-			alt="Hero background"
-			widths={[640, 768, 1024, 1280, 1536]}
-			sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
-			class="absolute left-0 w-full h-full object-cover -z-10"
-			loading="eager"
-		/>
-		<div class="flex items-center justify-center h-full">
-			<div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
-				<h1 class="sr-only">Jenovas Vitner</h1>
+  <div class="h-full grid grid-rows-[1fr,auto] overflow-hidden">
+    <!-- TODO: sjekk hero image optimization + fix layout med grid i stedet for absolute -->
+    <Image
+      src={heroImage}
+      alt="Hero background"
+      widths={[640, 768, 1024, 1280, 1536]}
+      sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
+      class="absolute left-0 w-full h-full object-cover -z-10"
+      loading="eager"
+    />
+    <div class="flex items-center justify-center h-full">
+      <div class="text-center text-white p-8 rounded-2xl w-full max-w-5xl">
+        <h1 class="sr-only">Jenovas Vitner</h1>
 
-				<SpotifyCard
-					link={showDetails.external_urls.spotify}
-					title={showDetails.name}
-					date={"test"}
-					showName={showDetails.name}
-					duration={"ts"}
-					imageUrl={showDetails.images[0].url}
-				/>
-				<PodcastLinks />
+        <SpotifyCard
+          link={showDetails.external_urls.spotify}
+          title={showDetails.name}
+          date={"test"}
+          showName={showDetails.name}
+          duration={"ts"}
+          imageUrl={showDetails.images[0].url}
+        />
+        <PodcastLinks />
 
-				<Hosts />
+        <Hosts />
 
-				<Episodes episodes={showDetails.episodes.items} />
-			</div>
-		</div>
-	</div>
+        <Episodes episodes={showDetails.episodes.items} />
+      </div>
+    </div>
+  </div>
 </Layout>

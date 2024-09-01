@@ -1,4 +1,5 @@
 ---
+import EpisodeNavigation from "@/components/EpisodeNavigation.astro";
 import Hosts from "@/components/Hosts.astro";
 import Layout from "@/components/Layout.astro";
 import PodcastLinks from "@/components/PodcastLinks.astro";
@@ -11,32 +12,30 @@ import { Schema } from "astro-seo-schema";
 import { ArrowLeft, ArrowRight } from "lucide-astro";
 
 export async function getStaticPaths() {
-	const showDetails = await getShowDetails();
-	const totalEpisodes = showDetails.total_episodes;
+  const showDetails = await getShowDetails();
+  const totalEpisodes = showDetails.total_episodes;
 
-	return showDetails.episodes.items.map((entry, index) => ({
-		params: { slug: slugify(entry.name) },
-		props: {
-			id: entry.id,
-			episodeNumber: totalEpisodes - index,
-			next:
-				index > 0
-					? {
-							slug: slugify(showDetails.episodes.items[index - 1].name),
-							episodeNumber: totalEpisodes - index + 1,
-							name: showDetails.episodes.items[index - 1].name,
-						}
-					: undefined,
-			previous:
-				index < showDetails.episodes.items.length - 1
-					? {
-							slug: slugify(showDetails.episodes.items[index + 1].name),
-							episodeNumber: totalEpisodes - index - 1,
-							name: showDetails.episodes.items[index + 1].name,
-						}
-					: undefined,
-		},
-	}));
+  return showDetails.episodes.items.map((entry, index) => ({
+    params: { slug: slugify(entry.name) },
+    props: {
+      id: entry.id,
+      episodeNumber: totalEpisodes - index,
+      next:
+        index > 0
+          ? {
+              slug: slugify(showDetails.episodes.items[index - 1].name),
+              name: `${totalEpisodes - index + 1}. ${showDetails.episodes.items[index - 1].name}`,
+            }
+          : undefined,
+      previous:
+        index < showDetails.episodes.items.length - 1
+          ? {
+              slug: slugify(showDetails.episodes.items[index + 1].name),
+              name: `${totalEpisodes - index - 1}. ${showDetails.episodes.items[index + 1].name}`,
+            }
+          : undefined,
+    },
+  }));
 }
 
 const { id, episodeNumber, next, previous } = Astro.props;
@@ -44,123 +43,118 @@ const episodeDetails = await getEpisodeDetails(id);
 ---
 
 <Layout>
-	<Fragment slot="head">
-		<SEO
-			title={episodeDetails.name}
-			description={episodeDetails.description}
-			openGraph={{
-				basic: {
-					title: episodeDetails.name,
-					type: "website",
-					image: episodeDetails.images[0].url,
-					url: Astro.url.toString(),
-				},
-				optional: {
-					description: episodeDetails.description,
-				},
-			}}
-			twitter={{
-				card: "summary_large_image",
-				site: "@rad_crew",
-				title: episodeDetails.name,
-				description: episodeDetails.description,
-				image: episodeDetails.images[0].url,
-			}}
-		/>
+  <Fragment slot="head">
+    <SEO
+      title={episodeDetails.name}
+      description={episodeDetails.description}
+      openGraph={{
+        basic: {
+          title: episodeDetails.name,
+          type: "website",
+          image: episodeDetails.images[0].url,
+          url: Astro.url.toString(),
+        },
+        optional: {
+          description: episodeDetails.description,
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@rad_crew",
+        title: episodeDetails.name,
+        description: episodeDetails.description,
+        image: episodeDetails.images[0].url,
+      }}
+    />
 
-		<Schema
-			item={{
-				"@context": "https://schema.org",
-				"@type": "PodcastEpisode",
-				name: episodeDetails.name,
-				description: episodeDetails.description,
-				episodeNumber,
-				image: episodeDetails.images[0].url,
-				url: Astro.url.toString(),
-				datePublished: episodeDetails.release_date,
-				duration: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
-				associatedMedia: {
-					"@type": "AudioObject",
-					contentUrl: episodeDetails.audio_preview_url,
-				},
-				partOfSeries: {
-					"@type": "PodcastSeries",
-					name: episodeDetails.show.name,
-					url: episodeDetails.show.external_urls.spotify,
-				},
-				author: authors,
-			}}
-		/>
-	</Fragment>
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "PodcastEpisode",
+        name: episodeDetails.name,
+        description: episodeDetails.description,
+        episodeNumber,
+        image: episodeDetails.images[0].url,
+        url: Astro.url.toString(),
+        datePublished: episodeDetails.release_date,
+        duration: `PT${Math.floor(episodeDetails.duration_ms / 60000)}M`,
+        associatedMedia: {
+          "@type": "AudioObject",
+          contentUrl: episodeDetails.audio_preview_url,
+        },
+        partOfSeries: {
+          "@type": "PodcastSeries",
+          name: episodeDetails.show.name,
+          url: episodeDetails.show.external_urls.spotify,
+        },
+        author: authors,
+      }}
+    />
+  </Fragment>
 
-	<article class="prose max-w-3xl mx-auto px-4 py-8">
-		<a
-			href="/"
-			class="inline-block mb-4 text-blue-600 hover:text-blue-800 transition-colors"
-		>
-			&larr; Tilbake til episodeoversikten
-		</a>
+  <article class="prose max-w-3xl mx-auto px-4 py-8">
+    <a
+      href="/"
+      class="inline-block mb-4 text-blue-600 hover:text-blue-800 transition-colors"
+    >
+      &larr; Tilbake til episodeoversikten
+    </a>
 
-		<h1 class="text-3xl font-bold mb-4">{episodeDetails.name}</h1>
-		<SpotifyEmbedEpisode title={episodeDetails.name} id={id} />
+    <section>
+      <h1 class="text-3xl font-bold mb-4">{episodeDetails.name}</h1>
+      <SpotifyEmbedEpisode title={episodeDetails.name} id={id} />
 
-		<div class="mt-6">
-			<p class="text-sm text-gray-600">
-				Utgitt {formatDate(episodeDetails.release_date)}
-				• {formatDuration(episodeDetails.duration_ms)}
-			</p>
-			<div class="mt-4">{episodeDetails.description}</div>
-		</div>
+      <div class="mt-6">
+        <p class="text-sm text-gray-600">
+          Utgitt {formatDate(episodeDetails.release_date)}
+          • {formatDuration(episodeDetails.duration_ms)}
+        </p>
+        <div class="mt-4">{episodeDetails.description}</div>
+      </div>
 
-		{
-			episodeDetails.explicit && (
-				<p class="mt-4 text-red-600 font-semibold">
-					Denne episoden har eksplisitt innhold.
-				</p>
-			)
-		}
-	</article>
+      {
+        episodeDetails.explicit && (
+          <p class="mt-4 text-red-600 font-semibold">
+            Denne episoden har eksplisitt innhold.
+          </p>
+        )
+      }
+    </section>
 
-	<nav
-		class="flex flex-col sm:flex-row justify-between items-stretch gap-4 my-8"
-	>
-		{
-			previous ? (
-				<a
-					href={`/episodes/${previous.slug}`}
-					class="flex flex-col items-start p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1"
-				>
-					<span class="text-sm text-muted-foreground mb-2 flex items-center">
-						<ArrowLeft class="w-4 h-4 mr-1" />
-						Forrige episode
-					</span>
-					<span class="font-semibold">
-						{previous.episodeNumber}. {previous.name}
-					</span>
-				</a>
-			) : (
-				<div class="flex-1" />
-			)
-		}
-		{
-			next ? (
-				<a
-					href={`/episodes/${next.slug}`}
-					class="flex flex-col items-end p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1 text-right"
-				>
-					<span class="text-sm text-muted-foreground mb-2 flex items-center">
-						Neste episode
-						<ArrowRight class="w-4 h-4 ml-1" />
-					</span>
-					<span class="font-semibold">
-						{next.episodeNumber}. {next.name}
-					</span>
-				</a>
-			) : (
-				<div class="flex-1" />
-			)
-		}
-	</nav>
-	<PodcastLinks />
-	<Hosts />
+    <section>
+      <h2>Vertene</h2>
+      <div class="not-prose">
+        <Hosts />
+      </div>
+    </section>
+
+    <nav
+      class="not-prose flex flex-col sm:flex-row justify-between items-stretch gap-4 my-8"
+    >
+      {
+        previous ? (
+          <EpisodeNavigation
+            direction="previous"
+            name={previous.name}
+            slug={previous.slug}
+          />
+        ) : (
+          <div class="flex-1" />
+        )
+      }
+      {
+        next ? (
+          <EpisodeNavigation
+            direction="next"
+            name={next.name}
+            slug={next.slug}
+          />
+        ) : (
+          <div class="flex-1" />
+        )
+      }
+    </nav>
+  </article>
+
+  <PodcastLinks />
 </Layout>

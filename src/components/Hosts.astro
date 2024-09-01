@@ -1,62 +1,52 @@
 ---
+import audunImage from "@/assets/audun.png";
+import josteinImage from "@/assets/jostein.jpg";
+import karlImage from "@/assets/karl.png";
 import { authors } from "@/lib/meta";
-import type { Person } from "schema-dts";
+import { Image } from "astro:assets";
+import { PodcastHost } from "./PodcastHost";
 
-type PodcastHost = Person & {
-  image: string;
-  twitterHandle: string;
+type PodcastHost = {
+  name: string;
+  link: string;
+  image: ImageMetadata;
+  handle: string;
 };
 
-const podcashHosts = [
+const podcastHosts = [
   {
-    ...authors[0],
-    twitterHandle: "@rad_crew",
-    image:
-      "https://pbs.twimg.com/profile_images/1747170546997960704/fYgZYbH3_400x400.jpg",
+    name: authors[0].name,
+    link: authors[0].sameAs,
+    handle: "rad_crew",
+    image: josteinImage,
   },
   {
-    ...authors[1],
-    twitterHandle: "@arodem",
-    image:
-      "https://pbs.twimg.com/profile_images/1757749842435039232/DpLX8h7W_400x400.jpg",
+    name: authors[1].name,
+    link: authors[1].sameAs,
+    handle: "arodem",
+    image: audunImage,
   },
   {
-    ...authors[2],
-    twitterHandle: "@MuffensKarl",
-    image:
-      "https://pbs.twimg.com/profile_images/1570522662471958528/zznBQLDR_400x400.jpg",
+    name: authors[2].name,
+    link: authors[2].sameAs,
+    handle: "MuffensKarl",
+    image: karlImage,
   },
 ] satisfies PodcastHost[];
 ---
 
-<div class="container mx-auto px-4 py-8">
-  <h2 class="text-2xl font-bold mb-6 text-center">Vertene</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    {
-      podcashHosts.map((host) => (
-        <a
-          href={host.sameAs}
-          class="bg-white shadow-md rounded-lg overflow-hidden block hover:shadow-lg transition-shadow"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="p-4 flex items-center space-x-4">
-            <div class="w-16 h-16 rounded-full overflow-hidden">
-              <img
-                src={host.image}
-                alt={host.name}
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex flex-col">
-              <h3 class="font-semibold text-lg">{host.name}</h3>
-              <span class="text-blue-500 hover:text-blue-700 transition-colors">
-                {host.twitterHandle}
-              </span>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    podcastHosts.map((host) => (
+      <PodcastHost name={host.name} handle={host.handle} link={host.link}>
+        <Image
+          src={host.image}
+          alt={host.name}
+          width={48}
+          height={48}
+          class="rounded-full"
+        />
+      </PodcastHost>
+    ))
+  }
 </div>
