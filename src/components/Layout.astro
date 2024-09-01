@@ -1,6 +1,7 @@
 ---
 import "@/global.css";
 import Favicons from "@/components/Favicons.astro";
+import Footer from "./Footer.astro";
 ---
 
 <html lang="no" class="h-full">
@@ -23,5 +24,9 @@ import Favicons from "@/components/Favicons.astro";
     <main class="max-w-4xl mx-auto px-4 flex-1">
       <slot />
     </main>
+
+    <div class="mt-10">
+      <Footer />
+    </div>
   </body>
 </html>
