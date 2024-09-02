@@ -1,4 +1,4 @@
-# Jenvoas Vitner Podcast
+# Jenovas Vitner Podcast
 
 A Norwegian podcast about Final Fantasy and Kingdom Hearts.
 
