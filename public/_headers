@@ -2,14 +2,6 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Home page
-/
-  Cache-Control: public, max-age=3600, s-maxage=86400
-
-# Episodes pages
-/episodes/*
-  Cache-Control: public, max-age=3600, s-maxage=86400
-
 # Default cache for all other routes
 /*
   Cache-Control: public, max-age=3600, s-maxage=86400
