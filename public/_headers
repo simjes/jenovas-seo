@@ -1,0 +1,7 @@
+# Astro static assets
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Default cache for all other routes
+/*
+  Cache-Control: public, max-age=3600, s-maxage=86400
