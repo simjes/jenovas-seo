@@ -4,32 +4,32 @@ import { formatDate, formatDuration } from "@/lib/time";
 import { CalendarDays, Clock } from "lucide-astro";
 
 type Props = {
-  number: number;
-  name: string;
-  release: string;
-  durationMs: number;
+	number: number;
+	name: string;
+	release: string;
+	durationMs: number;
 };
 
 const { number, release, durationMs, name } = Astro.props;
 ---
 
 <a
-  href={`/episodes/${slugify(name)}/`}
-  class="block p-4 md:p-6 border bg-card text-card-foreground rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02]"
-  data-astro-prefetch
+	href={`/episodes/${slugify(name)}/`}
+	class="block p-4 md:p-6 border bg-card text-card-foreground rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02]"
+	data-astro-prefetch
 >
-  <div class="flex flex-col md:flex-row md:items-center justify-between">
-    <div class="flex items-start md:items-center mb-2 md:mb-0">
-      <span class="text-3xl font-bold text-primary mr-4">{number}</span>
-      <div>
-        <h3 class="text-lg font-semibold mb-1">{name}</h3>
-        <div class="flex items-center text-sm text-muted-foreground">
-          <CalendarDays class="w-4 h-4 mr-1" />
-          <span>{formatDate(release)}</span>
-          <Clock class="w-4 h-4 ml-4 mr-1" />
-          <span>{formatDuration(durationMs)}</span>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="flex flex-col md:flex-row md:items-center justify-between">
+		<div class="flex items-start md:items-center mb-2 md:mb-0">
+			<span class="text-3xl font-bold text-primary mr-4">{number}</span>
+			<div>
+				<h3 class="text-lg font-semibold mb-1">{name}</h3>
+				<div class="flex items-center text-sm text-muted-foreground">
+					<CalendarDays class="w-4 h-4 mr-1" />
+					<span>{formatDate(release)}</span>
+					<Clock class="w-4 h-4 ml-4 mr-1" />
+					<span>{formatDuration(durationMs)}</span>
+				</div>
+			</div>
+		</div>
+	</div>
 </a>

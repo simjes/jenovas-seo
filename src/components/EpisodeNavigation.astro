@@ -2,40 +2,40 @@
 import { cn } from "@/lib/utils";
 import { ArrowLeft, ArrowRight } from "lucide-astro";
 type Props = {
-  direction: "previous" | "next";
-  name: string;
-  slug: string;
+	direction: "previous" | "next";
+	name: string;
+	slug: string;
 };
 const { direction, name, slug } = Astro.props;
 ---
 
 <a
-  href={`/episodes/${slug}/`}
-  class={cn(
-    "flex flex-col items-start p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1",
-    direction === "next" && "items-end",
-  )}
-  data-astro-prefetch
+	href={`/episodes/${slug}/`}
+	class={cn(
+		"flex flex-col items-start p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1",
+		direction === "next" && "items-end",
+	)}
+	data-astro-prefetch
 >
-  <div class="text-sm text-muted-foreground mb-2 flex items-center">
-    {
-      direction === "previous" && (
-        <>
-          <ArrowLeft class="w-4 h-4 mr-2" />
-          <span>Forrige episode</span>
-        </>
-      )
-    }
-    {
-      direction === "next" && (
-        <>
-          <span>Neste episode</span>
-          <ArrowRight class="w-4 h-4 ml-2" />
-        </>
-      )
-    }
-  </div>
-  <span class={cn("font-semibold", direction === "next" && "text-right")}>
-    {name}
-  </span>
+	<div class="text-sm text-muted-foreground mb-2 flex items-center">
+		{
+			direction === "previous" && (
+				<>
+					<ArrowLeft class="w-4 h-4 mr-2" />
+					<span>Forrige episode</span>
+				</>
+			)
+		}
+		{
+			direction === "next" && (
+				<>
+					<span>Neste episode</span>
+					<ArrowRight class="w-4 h-4 ml-2" />
+				</>
+			)
+		}
+	</div>
+	<span class={cn("font-semibold", direction === "next" && "text-right")}>
+		{name}
+	</span>
 </a>
