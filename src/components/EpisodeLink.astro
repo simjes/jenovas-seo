@@ -4,17 +4,17 @@ import { formatDate, formatDuration } from "@/lib/time";
 import { CalendarDays, Clock } from "lucide-astro";
 
 type Props = {
-	number: number;
-	name: string;
-	release: string;
-	durationMs: number;
+  number: number;
+  name: string;
+  release: string;
+  durationMs: number;
 };
 
 const { number, release, durationMs, name } = Astro.props;
 ---
 
 <a
-  href={`/episodes/${slugify(name)}`}
+  href={`/episodes/${slugify(name)}/`}
   class="block p-4 md:p-6 border bg-card text-card-foreground rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:scale-[1.02]"
   data-astro-prefetch
 >

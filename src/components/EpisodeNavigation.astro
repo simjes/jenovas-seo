@@ -2,19 +2,18 @@
 import { cn } from "@/lib/utils";
 import { ArrowLeft, ArrowRight } from "lucide-astro";
 type Props = {
-	direction: "previous" | "next";
-	name: string;
-	slug: string;
+  direction: "previous" | "next";
+  name: string;
+  slug: string;
 };
 const { direction, name, slug } = Astro.props;
 ---
 
-<!-- TODO: use card component -->
 <a
-  href={`/episodes/${slug}`}
+  href={`/episodes/${slug}/`}
   class={cn(
     "flex flex-col items-start p-4 border rounded-lg transition-colors hover:bg-muted/50 flex-1",
-    direction === "next" && "items-end"
+    direction === "next" && "items-end",
   )}
   data-astro-prefetch
 >
