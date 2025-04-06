@@ -4,17 +4,17 @@ export const authors = [
 	{
 		"@type": "Person",
 		name: "Jostein Hakestad",
-		sameAs: "https://twitter.com/rad_crew",
+		sameAs: "https://bsky.app/profile/jostein.radcrew.net",
 	},
 	{
 		"@type": "Person",
 		name: "Audun Rodem",
-		sameAs: "https://twitter.com/arodem",
+		sameAs: "https://bsky.app/profile/arodem.bsky.social",
 	},
 	{
 		"@type": "Person",
 		name: "Karl-Martin Hogsnes",
-		sameAs: "https://twitter.com/MuffensKarl",
+		sameAs: "https://bsky.app/profile/karl.lvup.no",
 	},
 ] satisfies Person[];
 
