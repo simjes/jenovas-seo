@@ -14,7 +14,7 @@ export const PodcastHost = ({ name, handle, link, children }: Props) => (
 		href={link}
 		target="_blank"
 		rel="noopener noreferrer"
-		className="block transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+		className="block transition-all duration-300 ease-in-out focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2"
 	>
 		<Card className="h-full hover:bg-accent">
 			<CardContent className="p-4">
@@ -24,7 +24,7 @@ export const PodcastHost = ({ name, handle, link, children }: Props) => (
 					<div className="text-left">
 						<h3 className="font-semibold text-sm sm:text-base">{name}</h3>
 						<div className="text-xs sm:text-sm text-muted-foreground">
-							@{handle}
+							{handle}
 						</div>
 					</div>
 				</div>
